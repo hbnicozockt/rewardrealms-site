@@ -16,10 +16,12 @@
   }
 
   .tab-buttons button {
-    width: 100%;
-    font-size: 1rem;
-    padding: 12px;
-  }
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 1rem;
+  padding: 12px;
+}
+
 
   .tab-content {
     padding: 1rem;
@@ -37,7 +39,17 @@
   }
 }
 .tab-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
   margin-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.tab-buttons::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 
