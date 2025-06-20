@@ -1167,6 +1167,15 @@
         }
       }
     });
+    </script>
+
+  <!-- Prevent tab button from keeping focus (avoids scroll jump) -->
+  <script>
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.blur(); // removes focus to stop scroll jumping
+      });
+    });
   </script>
 
 </body>
