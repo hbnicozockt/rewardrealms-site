@@ -79,30 +79,31 @@
 }
 
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      color: #222;
-      margin: 0; padding: 20px;
-      line-height: 1.6;
-      font-size: 20px;
-    }
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
     header {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/banner.png') no-repeat center center;
-  background-size: contain; /* 👈 This ensures full image is visible */
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 220px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/banner.png') no-repeat center center;
+  background-size: cover;
+  height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   color: white;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  border-radius: 0;
 }
+
 
     .tabs {
       display: flex;
