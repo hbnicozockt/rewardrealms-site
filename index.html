@@ -88,7 +88,9 @@
     }
     header {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/banner.png') no-repeat center center;
-  background-size: cover;
+  background-size: contain; /* 👈 This ensures full image is visible */
+  background-repeat: no-repeat;
+  background-position: center;
   height: 220px;
   display: flex;
   align-items: center;
