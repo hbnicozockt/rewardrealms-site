@@ -14,6 +14,7 @@
      crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://rewardrealms.com/" />
    <meta name="description" content="Earn free in-game currency in games like Fortnite, Brawl Stars, Clash Royale, PUBG Mobile and more – 100% legal and safe methods." />
   <!-- Open Graph (Facebook, Discord, etc.) -->
 <meta property="og:title" content="RewardRealms – Free In-Game Currency Guides" />
@@ -190,7 +191,6 @@
 <button class="tab-button" role="tab" aria-selected="false" aria-controls="fifa" id="tab-fifa">FIFA / EA FC</button>
 <button class="tab-button" role="tab" aria-selected="false" aria-controls="minecraft" id="tab-minecraft">Minecraft</button>
 <button class="tab-button" role="tab" aria-selected="false" aria-controls="pubg" id="tab-pubg">PUBG Mobile</button>
-
 
   </div>
 
@@ -2339,62 +2339,53 @@
 </footer>
 
 
-   <!-- Tab click functionality -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const tabs = document.querySelectorAll('.tab-button');
-      const contents = document.querySelectorAll('.tab-content');
-
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          // Remove active class from all tabs
-          tabs.forEach(t => {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-          });
-
-          // Add active class to clicked tab
-          tab.classList.add('active');
-          tab.setAttribute('aria-selected', 'true');
-
-          // Hide all content sections
-          contents.forEach(content => {
-            content.classList.remove('active');
-          });
-
-          // Show the associated content
-          const contentId = tab.getAttribute('aria-controls');
-          document.getElementById(contentId).classList.add('active');
-
-          // Update URL hash
-          window.location.hash = tab.id;
-        });
-      });
-    });
-  </script>
-
-  <!-- Auto Tab Switching on page load -->
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const hash = window.location.hash;
-      if (hash.startsWith('#tab-')) {
-        const tabId = hash.replace('#tab-', '');
-        const tabButton = document.querySelector(`#tab-${tabId}`);
-        if (tabButton) {
-          tabButton.click();
-        }
-      }
-    });
-    </script>
-
-  <!-- Prevent tab button from keeping focus (avoids scroll jump) -->
-  <script>
+   <script>
+  // Funktion zum Aktivieren eines Tabs
+  function activateTab(tabId) {
     document.querySelectorAll('.tab-button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.blur(); // removes focus to stop scroll jumping
-      });
+      btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
     });
-  </script>
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
 
+    const button = document.getElementById('tab-' + tabId);
+    const content = document.getElementById(tabId);
+
+    if (button && content) {
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+      content.classList.add('active');
+    }
+  }
+
+  // Event-Listener für Klicks auf Tabs
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const tabId = button.getAttribute('aria-controls');
+      activateTab(tabId);
+      // URL ohne Neuladen anpassen auf /tabId/
+      history.pushState(null, '', '/' + tabId + '/');
+    });
+  });
+
+  // Beim Laden der Seite den Tab aus der URL holen
+  window.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (path && document.getElementById('tab-' + path)) {
+      activateTab(path);
+    } else {
+      activateTab('brawlstars'); // Standard-Tab
+    }
+  });
+
+  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
+  });
+</script>
 </body>
 </html>
