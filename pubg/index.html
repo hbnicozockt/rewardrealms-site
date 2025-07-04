@@ -597,60 +597,43 @@
     const tabs = document.querySelectorAll('.tab-button');
     const contents = document.querySelectorAll('.tab-content');
 
+    function activateTab(tab) {
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+
+      contents.forEach(content => content.classList.remove('active'));
+
+      const contentId = tab.getAttribute('aria-controls');
+      document.getElementById(contentId).classList.add('active');
+    }
+
+    // Tab klicken, wenn drauf geklickt wird
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        // Entferne active-Klasse von allen Tabs
-        tabs.forEach(t => {
-          t.classList.remove('active');
-          t.setAttribute('aria-selected', 'false');
-        });
-
-        // Aktiviere geklickten Tab
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-
-        // Verstecke alle Contents
-        contents.forEach(content => {
-          content.classList.remove('active');
-        });
-
-        // Zeige passenden Content
-        const contentId = tab.getAttribute('aria-controls');
-        document.getElementById(contentId).classList.add('active');
-
-        // Optional: URL-Hash updaten (kann raus, wenn nicht gewünscht)
-        // window.location.hash = tab.id;
+        activateTab(tab);
       });
     });
-  });
-</script>
 
-<!-- Tab automatisch anhand URL-Pfad setzen -->
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const path = window.location.pathname.toLowerCase();
-    const trimmedPath = path.replace(/^\/|\/$/g, ''); // z.B. "fortnite" aus "/fortnite/"
+    // Pfad aus URL extrahieren, z.B. "/fortnite" -> "fortnite"
+    const path = window.location.pathname.toLowerCase().replace(/^\/|\/$/g, '');
 
-    const tabButton = document.querySelector(`#tab-${trimmedPath}`);
+    // Passenden Tab suchen
+    let tabToActivate = Array.from(tabs).find(tab => tab.id === `tab-${path}`);
 
-    if (tabButton) {
-      tabButton.click();
-    } else {
-      // Fallback: Erster Tab aktivieren, wenn Pfad nicht passt
-      const firstTab = document.querySelector('.tab-button');
-      if (firstTab) firstTab.click();
+    // Wenn kein passender Tab gefunden wird, aktiviere den ersten Tab
+    if (!tabToActivate && tabs.length > 0) {
+      tabToActivate = tabs[0];
     }
+
+    // Tab aktivieren
+    if (tabToActivate) activateTab(tabToActivate);
   });
 </script>
 
-<!-- Fokus von Tab-Buttons entfernen, um Scroll-Jump zu verhindern -->
-<script>
-  document.querySelectorAll('.tab-button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.blur();
-    });
-  });
-</script>
 
 
 </body>
