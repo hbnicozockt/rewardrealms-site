@@ -2340,52 +2340,15 @@
 
 
    <script>
-  // Funktion zum Aktivieren eines Tabs
-  function activateTab(tabId) {
-    document.querySelectorAll('.tab-button').forEach(btn => {
-      btn.classList.remove('active');
-      btn.setAttribute('aria-selected', 'false');
-    });
-    document.querySelectorAll('.tab-content').forEach(content => {
-      content.classList.remove('active');
-    });
-
-    const button = document.getElementById('tab-' + tabId);
-    const content = document.getElementById(tabId);
-
-    if (button && content) {
-      button.classList.add('active');
-      button.setAttribute('aria-selected', 'true');
-      content.classList.add('active');
-    }
-  }
-
-  // Event-Listener für Klicks auf Tabs
-  document.querySelectorAll('.tab-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const tabId = button.getAttribute('aria-controls');
-      activateTab(tabId);
-      // URL ohne Neuladen anpassen auf /tabId/
-      history.pushState(null, '', '/' + tabId + '/');
-    });
-  });
-
-  // Beim Laden der Seite den Tab aus der URL holen
-  window.addEventListener('DOMContentLoaded', () => {
-    const path = window.location.pathname.replace(/^\/|\/$/g, '');
-    if (path && document.getElementById('tab-' + path)) {
-      activateTab(path);
-    } else {
-      activateTab('brawlstars'); // Standard-Tab
-    }
-  });
-
-  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
-  document.querySelectorAll('.tab-button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.blur();
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tabId = button.getAttribute('aria-controls');
+        window.location.href = '/' + tabId + '/';
+      });
     });
   });
 </script>
 </body>
 </html>
+
