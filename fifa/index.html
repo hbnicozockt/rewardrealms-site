@@ -553,62 +553,16 @@
 </footer>
 
 
-   <!-- Tab click functionality -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const tabs = document.querySelectorAll('.tab-button');
-      const contents = document.querySelectorAll('.tab-content');
-
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          // Remove active class from all tabs
-          tabs.forEach(t => {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-          });
-
-          // Add active class to clicked tab
-          tab.classList.add('active');
-          tab.setAttribute('aria-selected', 'true');
-
-          // Hide all content sections
-          contents.forEach(content => {
-            content.classList.remove('active');
-          });
-
-          // Show the associated content
-          const contentId = tab.getAttribute('aria-controls');
-          document.getElementById(contentId).classList.add('active');
-
-          // Update URL hash
-          window.location.hash = tab.id;
-        });
+   <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tabId = button.getAttribute('aria-controls');
+        window.location.href = '/' + tabId + '/';
       });
     });
-  </script>
-
-  <!-- Auto Tab Switching on page load -->
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const hash = window.location.hash;
-      if (hash.startsWith('#tab-')) {
-        const tabId = hash.replace('#tab-', '');
-        const tabButton = document.querySelector(`#tab-${tabId}`);
-        if (tabButton) {
-          tabButton.click();
-        }
-      }
-    });
-    </script>
-
-  <!-- Prevent tab button from keeping focus (avoids scroll jump) -->
-  <script>
-    document.querySelectorAll('.tab-button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.blur(); // removes focus to stop scroll jumping
-      });
-    });
-  </script>
-
+  });
+</script>
 </body>
 </html>
+
