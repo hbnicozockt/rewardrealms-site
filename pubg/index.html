@@ -561,80 +561,52 @@
 
    <!-- Tab click functionality -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const tabs = document.querySelectorAll('.tab-button');
-      const contents = document.querySelectorAll('.tab-content');
-
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          // Remove active class from all tabs
-          tabs.forEach(t => {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-          });
-
-          // Add active class to clicked tab
-          tab.classList.add('active');
-          tab.setAttribute('aria-selected', 'true');
-
-          // Hide all content sections
-          contents.forEach(content => {
-            content.classList.remove('active');
-          });
-
-          // Show the associated content
-          const contentId = tab.getAttribute('aria-controls');
-          document.getElementById(contentId).classList.add('active');
-
-          // Update URL hash
-          window.location.hash = tab.id;
-        });
-      });
+  // Funktion zum Aktivieren eines Tabs
+  function activateTab(tabId) {
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
     });
-  <!-- Tab click functionality -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const tabs = document.querySelectorAll('.tab-button');
-    const contents = document.querySelectorAll('.tab-content');
-
-    function activateTab(tab) {
-      tabs.forEach(t => {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-
-      contents.forEach(content => content.classList.remove('active'));
-
-      const contentId = tab.getAttribute('aria-controls');
-      document.getElementById(contentId).classList.add('active');
-    }
-
-    // Tab klicken, wenn drauf geklickt wird
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        activateTab(tab);
-      });
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
     });
 
-    // Pfad aus URL extrahieren, z.B. "/fortnite" -> "fortnite"
-    const path = window.location.pathname.toLowerCase().replace(/^\/|\/$/g, '');
+    const button = document.getElementById('tab-' + tabId);
+    const content = document.getElementById(tabId);
 
-    // Passenden Tab suchen
-    let tabToActivate = Array.from(tabs).find(tab => tab.id === `tab-${path}`);
-
-    // Wenn kein passender Tab gefunden wird, aktiviere den ersten Tab
-    if (!tabToActivate && tabs.length > 0) {
-      tabToActivate = tabs[0];
+    if (button && content) {
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+      content.classList.add('active');
     }
+  }
 
-    // Tab aktivieren
-    if (tabToActivate) activateTab(tabToActivate);
+  // Event-Listener für Klicks auf Tabs
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const tabId = button.getAttribute('aria-controls');
+      activateTab(tabId);
+      // URL ohne Neuladen anpassen auf /tabId/
+      history.pushState(null, '', '/' + tabId + '/');
+    });
+  });
+
+  // Beim Laden der Seite den Tab aus der URL holen
+  window.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (path && document.getElementById('tab-' + path)) {
+      activateTab(path);
+    } else {
+      activateTab('brawlstars'); // Standard-Tab
+    }
+  });
+
+  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
   });
 </script>
-
-
-
 </body>
 </html>
