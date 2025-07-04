@@ -561,7 +561,6 @@
 
    <!-- Tab click functionality -->
   <script>
-  // Funktion zum Aktivieren eines Tabs
   function activateTab(tabId) {
     document.querySelectorAll('.tab-button').forEach(btn => {
       btn.classList.remove('active');
@@ -581,32 +580,34 @@
     }
   }
 
-  // Event-Listener für Klicks auf Tabs
-  document.querySelectorAll('.tab-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const tabId = button.getAttribute('aria-controls');
-      activateTab(tabId);
-      // URL ohne Neuladen anpassen auf /tabId/
-      history.pushState(null, '', '/' + tabId + '/');
-    });
-  });
-
-  // Beim Laden der Seite den Tab aus der URL holen
-  window.addEventListener('DOMContentLoaded', () => {
+  // Funktion um aktuellen Pfad zu lesen und Tab zu aktivieren
+  function checkPathAndActivateTab() {
     const path = window.location.pathname.replace(/^\/|\/$/g, '');
     if (path && document.getElementById('tab-' + path)) {
       activateTab(path);
     } else {
       activateTab('brawlstars'); // Standard-Tab
     }
-  });
+  }
 
-  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
-  document.querySelectorAll('.tab-button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.blur();
+  // Event-Listener für Klicks auf Tabs
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const tabId = button.getAttribute('aria-controls');
+      activateTab(tabId);
+      // URL ohne Neuladen anpassen
+      history.pushState(null, '', '/' + tabId + '/');
+      // Fokus entfernen um Scroll-Jump zu vermeiden
+      button.blur();
     });
   });
+
+  // Initial Tab setzen beim Laden der Seite
+  window.addEventListener('DOMContentLoaded', checkPathAndActivateTab);
+
+  // Auf History Navigation reagieren (Back/Forward Buttons)
+  window.addEventListener('popstate', checkPathAndActivateTab);
 </script>
+
 </body>
 </html>
