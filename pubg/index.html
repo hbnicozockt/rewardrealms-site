@@ -592,26 +592,23 @@
       });
     });
   </script>
-
-  <!-- Auto Tab Switching on page load -->
   window.addEventListener('DOMContentLoaded', () => {
-  const hash = window.location.hash;
-  if (hash.startsWith('#tab-')) {
-    const tabId = hash.replace('#tab-', '');
-    const tabButton = document.querySelector(`#tab-${tabId}`);
+    // Beispiel: Pfad ist /fortnite/, /roblox/ etc.
+    const path = window.location.pathname.toLowerCase();
+
+    // Entferne führenden und abschließenden Slash (falls vorhanden)
+    const trimmedPath = path.replace(/^\/|\/$/g, '');
+
+    // Finde Tab mit id `tab-<trimmedPath>`
+    const tabButton = document.querySelector(`#tab-${trimmedPath}`);
+
     if (tabButton) {
       tabButton.click();
+    } else {
+      // Optional: Default-Tab aktivieren, wenn Pfad nicht passt
+      document.querySelector('.tab-button.active')?.click();
     }
-  } else {
-    const path = window.location.pathname.replace(/^\/|\/$/g, '');
-    if (path) {
-      const tabButton = document.querySelector(`#tab-${path}`);
-      if (tabButton) {
-        tabButton.click();
-      }
-    }
-  }
-});
+  });
 
   </script>
 
