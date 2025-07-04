@@ -591,26 +591,67 @@
         });
       });
     });
-  </script>
+  <!-- Tab click functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Entferne active-Klasse von allen Tabs
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+
+        // Aktiviere geklickten Tab
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        // Verstecke alle Contents
+        contents.forEach(content => {
+          content.classList.remove('active');
+        });
+
+        // Zeige passenden Content
+        const contentId = tab.getAttribute('aria-controls');
+        document.getElementById(contentId).classList.add('active');
+
+        // Optional: URL-Hash updaten (kann raus, wenn nicht gewünscht)
+        // window.location.hash = tab.id;
+      });
+    });
+  });
+</script>
+
+<!-- Tab automatisch anhand URL-Pfad setzen -->
+<script>
   window.addEventListener('DOMContentLoaded', () => {
-    // Beispiel: Pfad ist /fortnite/, /roblox/ etc.
     const path = window.location.pathname.toLowerCase();
+    const trimmedPath = path.replace(/^\/|\/$/g, ''); // z.B. "fortnite" aus "/fortnite/"
 
-    // Entferne führenden und abschließenden Slash (falls vorhanden)
-    const trimmedPath = path.replace(/^\/|\/$/g, '');
-
-    // Finde Tab mit id `tab-<trimmedPath>`
     const tabButton = document.querySelector(`#tab-${trimmedPath}`);
 
     if (tabButton) {
       tabButton.click();
     } else {
-      // Optional: Default-Tab aktivieren, wenn Pfad nicht passt
-      document.querySelector('.tab-button.active')?.click();
+      // Fallback: Erster Tab aktivieren, wenn Pfad nicht passt
+      const firstTab = document.querySelector('.tab-button');
+      if (firstTab) firstTab.click();
     }
   });
+</script>
 
-  </script>
+<!-- Fokus von Tab-Buttons entfernen, um Scroll-Jump zu verhindern -->
+<script>
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
+  });
+</script>
+
 
 </body>
 </html>
