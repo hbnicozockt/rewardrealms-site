@@ -548,65 +548,16 @@
 </section>
 
 
-<footer>
- <footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
+<footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
   © 2025 RewardRealms.com. All rights reserved. |
   <a href="#privacy-policy">Privacy Policy</a> |
   <a href="#about">About</a> |
   <a href="#terms">Terms of Use</a> |
   <a href="#contact">Contact</a>
 </footer>
-</footer>
 
-
-    <script>
-    // Funktion zum Aktivieren eines Tabs
-    function activateTab(tabId) {
-      document.querySelectorAll('.tab-button').forEach(btn => {
-        btn.classList.remove('active');
-        btn.setAttribute('aria-selected', 'false');
-      });
-      document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.remove('active');
-      });
-
-      const button = document.getElementById('tab-' + tabId);
-      const content = document.getElementById(tabId);
-
-      if (button && content) {
-        button.classList.add('active');
-        button.setAttribute('aria-selected', 'true');
-        content.classList.add('active');
-      }
-    }
-
-    // Funktion, um Pfad zu lesen und entsprechenden Tab zu aktivieren
-    function checkPathAndActivateTab() {
-      const path = window.location.pathname.replace(/^\/|\/$/g, '');
-      if (path && document.getElementById('tab-' + path)) {
-        activateTab(path);
-      } else {
-        activateTab('brawlstars'); // Standard-Tab
-      }
-    }
-
-    // Tabs klickbar machen
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.tab-button').forEach(button => {
-        button.addEventListener('click', () => {
-          const tabId = button.getAttribute('aria-controls');
-          activateTab(tabId);
-          history.pushState(null, '', '/' + tabId + '/');
-          button.blur();
-        });
-      });
-
-      checkPathAndActivateTab();
-    });
-
-    // Auf Zurück/Vorwärts im Browser reagieren
-    window.addEventListener('popstate', checkPathAndActivateTab);
-  </script>
+<script src="/js/tabs.js"></script>
 </body>
 </html>
+
 
