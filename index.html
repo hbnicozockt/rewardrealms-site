@@ -1,83 +1,375 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RewardRealms – Wähle dein Spiel</title>
-  <link rel="canonical" href="https://rewardrealms.com/" />
-  <meta name="description" content="Wähle dein Lieblingsspiel und lerne, wie du kostenlose Ingame-Währung verdienst. 100% legal & sicher!" />
-  <link rel="icon" href="/favicon.png" />
+  <title>RewardRealms – Free In-Game Currency & Resources</title>
   <style>
+  html {
+  scroll-behavior: smooth;
+}
+
+    /* Grundlegendes Reset & Fonts */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafb;
+      color: #333;
       margin: 0;
-      padding: 0;
-      background: #f8fafc;
-      text-align: center;
+      line-height: 1.6;
     }
-    header {
-      background: url('/banner.png') no-repeat center center;
-      background-size: cover;
-      height: 260px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    a {
+      color: #2a7ae2;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Banner / Hero */
+    .hero-banner {
+      background: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
       color: white;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
     }
-    h1 {
-      font-size: 1.8rem;
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn-primary {
+      background: #2a7ae2;
+      color: white;  
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .btn-primary:hover {
+      background: #155ab6;
+    }
+
+    /* Header & Sections */
+    header, section {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgb(0 0 0 / 0.05);
+    }
+    header h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+    header p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #444;
+    }
+    section h3 {
+      margin-top: 0;
+      color: #2a7ae2;
+    }
+
+    /* Spiele-Links Grid */
+    .game-links {
+      max-width: 900px;
+      margin: 20px auto 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+      gap: 15px;
       padding: 0 20px;
     }
-    .game-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      padding: 30px 20px;
-    }
     .game-link {
-      display: block;
-      background: #3b82f6;
+      background: #2a7ae2;
       color: white;
-      padding: 16px 30px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s, transform 0.2s;
+      text-align: center;
+      padding: 12px 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 3px 7px rgb(42 122 226 / 0.5);
+      transition: background 0.3s ease;
+      display: block;
+      user-select: none;
     }
     .game-link:hover {
-      background: #2563eb;
-      transform: scale(1.05);
+      background: #155ab6;
     }
+
+    /* Footer */
     footer {
-      margin-top: 40px;
+      background: #222;
+      color: #bbb;
+      text-align: center;
+      padding: 25px 15px;
       font-size: 14px;
-      color: #999;
+      user-select: none;
+    }
+    footer a {
+      color: #bbb;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+      color: white;
+    }
+
+    /* FAQ, About, Terms etc: konsistent */
+    #about, #faq, #terms, #privacy-policy, #contact {
+      background: white;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgb(0 0 0 / 0.05);
+    }
+    #faq h3 {
+      margin-top: 20px;
+      color: #2a7ae2;
+    }
+
+    /* Button toggle Other Games */
+    #toggle-other-games {
+      cursor: pointer;
+      background: #2a7ae2;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      user-select: none;
+      transition: background 0.3s ease;
+    }
+    #toggle-other-games:hover {
+      background: #155ab6;
     }
   </style>
 </head>
 <body>
+
+  <div class="hero-banner">
+    <div class="hero-content">
+      <h1>🎮 Unlock Free In-Game Rewards Safely & Easily</h1>
+      <p>No hacks, no scams — just legit, proven methods to boost your favorite games.</p>
+      <a href="#game-links" class="btn-primary">Start Now</a>
+    </div>
+  </div>
+
   <header>
-    <h1>🎮 Choose Your Game & Start Earning – 100% Free! 🎮</h1>
+    <h2>🎮 Earn Free In-Game Currency & Resources for Your Favorite Games – 100% Legal!</h2>
+    <p>Welcome to RewardRealms, your ultimate destination to unlock free, genuine in-game rewards without risking a thing. We know how frustrating it can be to grind endlessly or spend real money just to get that one skin, coin, or special item you’ve been dreaming of. That’s why we’ve built a safe, reliable platform packed with proven methods to help you boost your game without cheating or hacks.</p>
+    
+    <p>Whether you’re a casual gamer looking to get a little extra or a dedicated pro hunting for every advantage, we offer step-by-step guides, legit tips, and useful resources for all your favorite titles — from Brawl Stars and Roblox to Apex Legends and beyond. Our team is passionate about gaming and committed to bringing you the best, safest ways to enhance your experience while respecting the game developers’ rules.</p>
+    
+    <p>On RewardRealms, you’ll find easy-to-follow tutorials, current updates on new offers, and insider tricks that actually work. No scams, no fake promises — just honest advice and community support to help you make the most out of your gaming time.</p>
+    
+    <p>Ready to level up your gameplay and score some awesome rewards for free? Simply select your favorite game from below and dive into the world of smart earning. We’re here to help you turn your playtime into a rewarding experience — without ever spending a dime.</p>
   </header>
 
-  <div class="game-links">
-    <a href="/brawlstars.html" class="game-link">Brawl Stars</a>
-    <a href="/roblox.html" class="game-link">Roblox</a>
-    <a href="/fortnite.html" class="game-link">Fortnite</a>
-    <a href="/cod.html" class="game-link">Call of Duty</a>
-    <a href="/clashroyale.html" class="game-link">Clash Royale</a>
-    <a href="/genshin.html" class="game-link">Genshin Impact</a>
-    <a href="/apex.html" class="game-link">Apex Legends</a>
-    <a href="/fifa.html" class="game-link">FIFA / EA FC</a>
-    <a href="/minecraft.html" class="game-link">Minecraft</a>
-    <a href="/pubg.html" class="game-link">PUBG Mobile</a>
-  </div>
+  <section>
+    <h3>🎯 Top Games to Boost Your Rewards</h3>
+    <p>Discover our most popular guides for the hottest games right now. Whether you're grinding coins in Brawl Stars, building worlds in Roblox, or battling in Apex Legends, we've got tailored strategies to help you get free currency, skins, and more. Click on any game tab above to get started with expert tips crafted just for that game.</p>
+  </section>
+
+  <section>
+    <h3>🛠 How It Works</h3>
+    <p>We combine safe, legal methods such as participating in surveys, joining official events, redeeming offers, and using reward apps that game developers approve. Our step-by-step tutorials walk you through each process, so you know exactly what to do. No hacks, no cheats — just smart ways to earn that boost you want.</p>
+  </section>
+
+  <section>
+    <h3>📅 Latest Guides & Updates</h3>
+    <p>Stay ahead of the curve with fresh guides added regularly. We keep track of new in-game events, seasonal rewards, and exclusive offers so you never miss an opportunity to claim free resources. Bookmark RewardRealms and check back often for new tips and tricks!</p>
+  </section>
+
+  <section>
+    <h3>🤝 Join the Community</h3>
+    <p>RewardRealms is more than just a website — it’s a place where gamers share tips, success stories, and motivation. Connect with fellow players through our social channels or comment sections and become part of a supportive network that’s passionate about gaming and fair rewards.</p>
+  </section>
+
+  <div class="game-links"
+
+
+
+  <div class="game-links" id="game-links">
+  <a href="/brawlstars.html" class="game-link">Brawl Stars</a>
+  <a href="/roblox.html" class="game-link">Roblox</a>
+  <a href="/fortnite.html" class="game-link">Fortnite</a>
+  <a href="/cod.html" class="game-link">Call of Duty</a>
+  <a href="/clashroyale.html" class="game-link">Clash Royale</a>
+  <a href="/genshin.html" class="game-link">Genshin Impact</a>
+  <a href="/apex.html" class="game-link">Apex Legends</a>
+  <a href="/fifa.html" class="game-link">FIFA / EA FC</a>
+  <a href="/minecraft.html" class="game-link">Minecraft</a>
+  <a href="/pubg.html" class="game-link">PUBG Mobile</a>
+</div>
+
 
   <footer>
     &copy; 2025 RewardRealms. All rights reserved.
   </footer>
+</body>
+</html>
+
+<!-- About Section -->
+<section id="about" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <h2>About RewardRealms</h2>
+  <p>RewardRealms is your ultimate destination for discovering free and completely legal methods to earn in-game currency in popular games like Fortnite, PUBG Mobile, Clash Royale, and many more. As a longtime gamer, I have spent years searching for the best ways to earn in-game currencies without spending real money. Drawing from my personal experience and research, I share the most reliable and effective free-to-play strategies to help you level up and enjoy your favorite games without breaking the bank. I’m also a Brawl Stars YouTuber with over 600,000 subscribers, bringing my passion and knowledge to a large gaming community. With RewardRealms, I want to provide players with a clear overview of all legal and working methods out there — so you can avoid scams and focus on what really works. Join RewardRealms and unlock the secrets to maximizing your gaming experience for free!</p>
+</section>
+
+   
+
+<section id="faq" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>Is this website safe and legal?</h3>
+  <p>Yes! All methods we share are 100% legal. We do not promote hacks, cheats, or unauthorized third-party tools. Every guide is based on official game events, apps, or promotions.</p>
+
+  <h3>Do I need to pay to access these guides?</h3>
+  <p>No, everything on RewardRealms.com is completely free. We monetize with Google AdSense — just like YouTube — so you can read for free while we earn from ads.</p>
+
+  <h3>Will I get banned using these methods?</h3>
+  <p>No. We only promote legitimate methods provided by game developers, like battle pass recycling, daily events, and reward apps like Google Opinion Rewards.</p>
+
+  <h3>How does the site earn money?</h3>
+  <p>We earn revenue from Google AdSense when users view or interact with ads, just like most YouTubers or blogs. You don’t pay anything to support us!</p>
+
+  <h3>Can I request a guide for a specific game?</h3>
+  <p>Absolutely! Just contact us through the About section or leave a comment where available — we love suggestions from the community.</p>
+</section>
+
+   <section id="terms" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <h2>Terms of Use</h2>
+  <p>By using RewardRealms.com, you agree not to misuse the content or attempt to manipulate or game systems discussed on this website. All guides are for informational purposes only. We do not promote hacks, cheats, or illegal tools.</p>
+  <p>We are not affiliated with the game publishers mentioned. Game names and logos are trademarks of their respective owners.</p>
+</section>
+    
+
+
+  
+
+  <!-- Privacy Policy -->
+  <section id="privacy-policy" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.5;">
+    <h2>Privacy Policy</h2>
+    <p>We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with legal data protection regulations.</p>
+    <p>This website does not use any tracking tools or external analytics services. No personal data is stored or processed except for data you voluntarily provide (e.g., through contact forms).</p>
+    <p>Advertisements are served via Google AdSense, which may set cookies. For more details, please see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+    <p>If you have any questions about data protection, you can contact us at any time.</p>
+  </section>
+
+ 
+<section id="contact" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-size: 16px; line-height: 1.6;">
+  <h2>Contact</h2>
+  <p>Got questions, suggestions, or partnership inquiries?</p>
+  <p>You can reach us at: <a href="mailto:partnership@rewardrealms.com">partnership@rewardrealms.com</a></p>
+  <p>We typically respond within 24–48 hours.</p>
+</section>
+
+<footer>
+ <footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
+  © 2025 RewardRealms.com. All rights reserved. |
+  <a href="#privacy-policy">Privacy Policy</a> |
+  <a href="#about">About</a> |
+  <a href="#terms">Terms of Use</a> |
+  <a href="#contact">Contact</a>
+</footer>
+</footer>
+
+<script>
+  // Toggle Other Games Liste
+  const toggleBtn = document.getElementById('toggle-other-games');
+  const otherGamesList = document.getElementById('other-games-list');
+
+  toggleBtn.addEventListener('click', () => {
+    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+
+    if (isExpanded) {
+      otherGamesList.style.display = 'none';
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.textContent = 'Other Games ▼';
+    } else {
+      otherGamesList.style.display = 'flex';
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      toggleBtn.textContent = 'Other Games ▲';
+    }
+  });
+</script>
+
+
+
+
+
+   <script>
+  // Funktion zum Aktivieren eines Tabs
+  function activateTab(tabId) {
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+
+    const button = document.getElementById('tab-' + tabId);
+    const content = document.getElementById(tabId);
+
+    if (button && content) {
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+      content.classList.add('active');
+    }
+  }
+
+  // Event-Listener für Klicks auf Tabs
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const tabId = button.getAttribute('aria-controls');
+      activateTab(tabId);
+      // URL ohne Neuladen anpassen auf /tabId/
+      history.pushState(null, '', '/' + tabId + '/');
+    });
+  });
+
+  // Beim Laden der Seite den Tab aus der URL holen
+  window.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (path && document.getElementById('tab-' + path)) {
+      activateTab(path);
+    } else {
+      activateTab('brawlstars'); // Standard-Tab
+    }
+  });
+
+  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
+  });
+</script>
 </body>
 </html>
 
