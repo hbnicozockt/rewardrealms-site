@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <link rel="canonical" href="https://rewardrealms.com/apex/" />
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MLVZBNND22"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MLVZBNND22');
-  </script>
-  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008" crossorigin="anonymous"></script>
-  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MLVZBNND22"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MLVZBNND22');
+</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
+     crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <meta name="description" content="Earn free in-game currency in games like Fortnite, Brawl Stars, Clash Royale, PUBG Mobile and more – 100% legal and safe methods." />
-  
+  <link rel="canonical" href="https://rewardrealms.com/" />
+   <meta name="description" content="Earn free in-game currency in games like Fortnite, Brawl Stars, Clash Royale, PUBG Mobile and more – 100% legal and safe methods." />
   <!-- Open Graph (Facebook, Discord, etc.) -->
-  <meta property="og:title" content="RewardRealms – Free In-Game Currency Guides" />
-  <meta property="og:description" content="Learn how to earn free, legal currency in Fortnite, PUBG, Clash Royale and more. 100% safe and free-to-play friendly." />
-  <meta property="og:image" content="https://rewardrealms.com/banner.jpg" />
-  <meta property="og:url" content="https://rewardrealms.com/apex/" />
-  
-  <meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="RewardRealms – Free In-Game Currency Guides" />
+<meta property="og:description" content="Learn how to earn free, legal currency in Fortnite, PUBG, Clash Royale and more. 100% safe and free-to-play friendly." />
+<meta property="og:image" content="https://rewardrealms.com/banner.jpg" />
+<meta property="og:url" content="https://rewardrealms.com" />
+<meta name="twitter:card" content="summary_large_image" />
 
  <title>Free Gems, Robux & V-Bucks – Official Methods</title>
 <link rel="icon" type="image/png" href="/favicon.png" />
   <style>
   /* Make tabs stack vertically on small screens */
+/* Make tabs stack vertically on small screens */
 @media (max-width: 768px) {
   .tab-buttons {
     display: flex;
@@ -39,12 +36,11 @@
   }
 
   .tab-buttons button {
-  flex: 0 0 auto;
-  white-space: nowrap;
-  font-size: 1rem;
-  padding: 12px;
-}
-
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 1rem;
+    padding: 12px;
+  }
 
   .tab-content {
     padding: 1rem;
@@ -61,39 +57,36 @@
     margin: 1.5rem 0;
   }
 }
+
 .tab-buttons {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  flex-direction: column; /* vertikal anordnen */
   gap: 10px;
   margin-bottom: 1rem;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
+  overflow-x: visible;    /* kein horizontaler Scroll */
+  -webkit-overflow-scrolling: auto; /* optional, kann weg */
+  scrollbar-width: auto;             /* optional, kann weg */
 }
 
+/* scrollbar ausblenden ist jetzt nicht nötig, da kein Scroll */
 .tab-buttons::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
 
-/* Ensure tables don’t overflow on mobile */
-.tab-content table {
-  max-width: 100%;
-  overflow-x: auto;
-  word-wrap: break-word;
-}
-
-    body {
+/* Global Layout */
+body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #222;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   margin: 0;
   padding: 0;
   line-height: 1.6;
   font-size: 20px;
 }
 
-    header {
+/* Header (Hero) */
+header {
   width: 100vw;
   margin: 0 auto;
   padding: 0;
@@ -106,118 +99,305 @@
   color: white;
   text-align: center;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  border-radius: 0;
+}
+
+/* Tab-Leiste */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox*/
+  justify-content: center;  /* <-- diese Zeile einfügen */
 }
 
 
-    .tabs {
-      display: flex;
-      justify-content: center;
-      background-color: #ddd;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 20px;
-      user-select: none;
-    }
-    .tab-button {
-      cursor: pointer;
-      padding: 15px 30px;
-      font-weight: bold;
-      color: #555;
-      border: none;
-      background: none;
-      border-bottom: 3px solid transparent;
-      transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-      flex-grow: 1;
-      text-align: center;
-    }
-    .tab-button:hover {
-      background-color: #ccc;
-      color: #222;
-    }
-    .tab-button.active {
-      border-bottom: 3px solid #ffcc00;
-      background-color: #fff;
-      color: #222;
-    }
-    .content {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      min-height: 400px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      color: #222;
-    }
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    .ad-slot {
-      background-color: #f0f0f0;
-      color: #555;
-      text-align: center;
-      padding: 15px;
-      margin: 15px 0;
-      border: 2px dashed #ccc;
-      border-radius: 10px;
-      font-style: italic;
-      user-select: none;
-    }
-    footer {
-      max-width: 900px;
-      margin: 40px auto 0;
-      text-align: center;
-      font-size: 14px;
-      color: #888;
-      font-style: italic;
-    }
+.tab-buttons::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+/* Soft-Fade an den Seiten der Tab-Leiste */
+.tab-buttons-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-buttons::before,
+.tab-buttons::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.tab-buttons::before {
+  left: 0;
+  background: linear-gradient(to right, #f7f7f7 0%, transparent 100%);
+}
+
+.tab-buttons::after {
+  right: 0;
+  background: linear-gradient(to left, #f7f7f7 0%, transparent 100%);
+}
+
+/* Optional: Tabs umbrechen auf kleinen Bildschirmen */
+@media (max-width: 768px) {
+  .tab-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tab-button {
+    flex: 1 1 45%;
+    margin: 5px 0;
+  }
+}
+
+.tab-button {
+  cursor: pointer;
+  padding: 18px 40px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #555;
+  background: none;
+  border: 2px solid #ccc;  /* dezenter grauer Rahmen */
+  border-radius: 14px;
+  border-bottom: none !important;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s;
+  flex-grow: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tab-button:hover {
+  background-color: #f3f4f6;
+  border-color: #3b82f6;
+  color: #1e40af;
+  transform: scale(1.03);
+}
+
+.tab-button.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  box-shadow: none; /* Entfernt den Schatten */
+  transform: scale(1.05);
+  border-bottom: none !important;
+}
+ 
+/* Content-Karten */
+.content {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  color: var(--color-text);
+}
+
+/* Tabellen & Inhalte */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.tab-content table {
+  max-width: 100%;
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+
+/* Werbe-Slots */
+.ad-slot {
+  background-color: #fefce8;
+  color: #92400e;
+  text-align: center;
+  padding: 15px;
+  margin: 15px 0;
+  border: 2px dashed #fcd34d;
+  border-radius: 10px;
+  font-style: italic;
+  user-select: none;
+}
+
+/* Footer */
+footer {
+  max-width: 900px;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* Optional: Buttons für z. B. "Jetzt starten" */
+.btn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out, transform 0.1s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.tab-button,
+.tab-button.active {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.tabs {
+  box-shadow: none !important;
+}
+ 
   </style>
 </head>
 <body>
 
   <header>
-    <h2>🎮 Earn Free In-Game Currency & Resources for Your Favorite Games – 100% Legal!</h2>
-  </header>
+  <h2>🎮 Earn Free In-Game Currency & Resources for Your Favorite Games – 100% Legal!</h2>
+</header>
 
-    <div class="tab-buttons" role="tablist">
+<div class="tab-buttons-wrapper">
+  <div class="tab-buttons" role="tablist">
+    <!-- Haupt-Games als sichtbare Links -->
+    <a href="/brawlstars/" class="tab-button" role="tab" aria-selected="false" aria-controls="brawlstars" id="tab-brawlstars">Brawl Stars</a>
+    <a href="/roblox/" class="tab-button" role="tab" aria-selected="false" aria-controls="roblox" id="tab-roblox">Roblox</a>
+    <a href="/fortnite/" class="tab-button" role="tab" aria-selected="false" aria-controls="fortnite" id="tab-fortnite">Fortnite</a>
 
-    <button class="tab-button" role="tab" aria-selected="false" aria-controls="brawlstars" id="tab-brawlstars">Brawl Stars</button>
-<button class="tab-button active" role="tab" aria-selected="true" aria-controls="roblox" id="tab-roblox">Roblox</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="fortnite" id="tab-fortnite">Fortnite</button>
-
-<!-- ✅ Set this one as active -->
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="cod" id="tab-cod">Call of Duty</button>
-
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="clashroyale" id="tab-clashroyale">Clash Royale</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="genshin" id="tab-genshin">Genshin Impact</button>
-<button class="tab-button active" role="tab" aria-selected="true" aria-controls="apex" id="tab-apex">Apex Legends</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="fifa" id="tab-fifa">FIFA / EA FC</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="minecraft" id="tab-minecraft">Minecraft</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="pubg" id="tab-pubg">PUBG Mobile</button>
-
-  
-
-
-
+    <!-- Other Games Toggle Button bleibt Button zum Aufklappen -->
+    <button class="tab-button" id="toggle-other-games" aria-expanded="false" aria-controls="other-games-list">Other Games ▼</button>
   </div>
 
+  <!-- Versteckte Liste mit weiteren Games als Links -->
+  <div id="other-games-list" style="display: none; flex-direction: column; gap: 8px; margin-top: 10px;" role="tabpanel" aria-labelledby="toggle-other-games">
+    <a href="/cod/" class="tab-button" role="tab" aria-selected="false" aria-controls="cod" id="tab-cod">Call of Duty</a>
+    <a href="/clashroyale/" class="tab-button" role="tab" aria-selected="false" aria-controls="clashroyale" id="tab-clashroyale">Clash Royale</a>
+    <a href="/genshin/" class="tab-button" role="tab" aria-selected="false" aria-controls="genshin" id="tab-genshin">Genshin Impact</a>
+    <a href="/apex/" class="tab-button active" role="tab" aria-selected="true" aria-controls="apex" id="tab-apex">Apex Legends</a>
+    <a href="/fifa/" class="tab-button" role="tab" aria-selected="false" aria-controls="fifa" id="tab-fifa">FIFA / EA FC</a>
+    <a href="/minecraft/" class="tab-button" role="tab" aria-selected="false" aria-controls="minecraft" id="tab-minecraft">Minecraft</a>
+    <a href="/pubg/" class="tab-button" role="tab" aria-selected="false" aria-controls="pubg" id="tab-pubg">PUBG Mobile</a>
+  </div>
+</div>
+
+
+
+<script>
+  // Funktion zum Aktivieren eines Tabs
+  function activateTab(tabId) {
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+
+    const button = document.getElementById('tab-' + tabId);
+    const content = document.getElementById(tabId);
+
+    if (button && content) {
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+      content.classList.add('active');
+    }
+  }
+
+  // Referenz auf Other Games Button und Liste
+  const otherGamesToggle = document.getElementById('toggle-other-games');
+  const otherGamesList = document.getElementById('other-games-list');
+
+  // Klick-Event für alle Tab-Buttons
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      // Wenn der Button der "Other Games" Toggle ist:
+      if (button === otherGamesToggle) {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        if (isExpanded) {
+          // Liste zuklappen
+          otherGamesList.style.display = 'none';
+          button.setAttribute('aria-expanded', 'false');
+          button.textContent = 'Other Games ▼';
+        } else {
+          // Liste aufklappen
+          otherGamesList.style.display = 'flex';
+          button.setAttribute('aria-expanded', 'true');
+          button.textContent = 'Other Games ▲';
+        }
+        // Keine Tab-Aktivierung oder Content-Wechsel!
+        return;
+      }
+
+      // Sonst normalen Tab wechseln
+      const tabId = button.getAttribute('aria-controls');
+      activateTab(tabId);
+
+      // Other Games Liste zuklappen, wenn offen
+      otherGamesList.style.display = 'none';
+      otherGamesToggle.setAttribute('aria-expanded', 'false');
+      otherGamesToggle.textContent = 'Other Games ▼';
+
+      // URL anpassen (optional)
+      history.pushState(null, '', '/' + tabId + '/');
+    });
+  });
+
+  // Beim Laden der Seite den Tab aus der URL holen
+  window.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (path && document.getElementById('tab-' + path)) {
+      activateTab(path);
+    } else {
+      activateTab('brawlstars'); // Standard-Tab
+    }
+  });
+
+  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
+  });
+</script>
+
   <div class="content">
-<!-- Apex Legends Content -->
-<section id="apex" role="tabpanel" aria-labelledby="tab-apex" class="tab-content active">
+    <!-- Apex Legends Content -->
+<section id="apex" role="tabpanel" aria-labelledby="tab-apex" class="tab-content">
   <h2>🎯 Apex Legends: How to Earn Legend Tokens & Crafting Metals Legally and for Free – The Ultimate Free-to-Play Guide</h2>
-  <!-- Dein Content hier -->
-</section>
 
+  <p>Apex Legends, developed by Respawn Entertainment, is one of the hottest battle royale shooters on PC and consoles. With its fast-paced gameplay, diverse Legends roster, and seasonal updates, it captivates millions worldwide. Clips and highlights flood social platforms like YouTube Shorts, TikTok, and Twitch, making it one of the most streamed and played competitive shooters today.
 
-  <p>Apex Legends, developed by Respawn Entertainment, is one of the most popular battle royale shooters on consoles and PC. With its fast-paced gameplay, diverse cast of Legends, and seasonal updates, it attracts millions of players worldwide and dominates social media platforms like YouTube Shorts and TikTok with highlight reels and gameplay clips.</p>
+At the heart of progression and customization in Apex Legends lie two crucial in-game currencies: Legend Tokens and Crafting Metals. While players can buy Apex Coins with real money for premium cosmetics, you can absolutely earn Legend Tokens and Crafting Metals 100% free — just by playing the game smartly and consistently.
 
-  <p>Central to unlocking new Legends and customizing your gear are the in-game currencies Legend Tokens and Crafting Metals. While players can purchase Apex Coins with real money to buy premium items, there are plenty of legal, free-to-play ways to earn Legend Tokens and Crafting Metals through gameplay.</p>
+This ultimate Free-to-Play guide breaks down every legit method to grind these currencies efficiently, helping you unlock new Legends and craft dope cosmetic items — without spending a cent.
+</p>
 
-  <p>This guide details all the best methods to farm these currencies efficiently so you can expand your Legend roster and upgrade your cosmetics without spending a cent.</p>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
@@ -232,12 +412,53 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <h3>What Are Legend Tokens and Crafting Metals?</h3>
-  <ul>
-    <li><strong>Legend Tokens:</strong> Used to unlock new Legends and buy certain cosmetic items.</li>
-    <li><strong>Crafting Metals:</strong> A resource used in the crafting system to create cosmetic items like weapon skins and badges.</li>
-  </ul>
+  <p>
+What Are Legend Tokens and Crafting Metals?
+Legend Tokens
+These tokens are your ticket to unlocking new Legends and purchasing certain cosmetic items like badges and banners. They’re earned mostly by leveling up and completing specific challenges.
 
+Crafting Metals
+Crafting Metals are a crafting resource used to create weapon skins, badges, and other cosmetic items that might not be directly purchasable otherwise. They’re vital for customizing your Legends and weapons uniquely.
+
+<p>
+1. Level Up Your Account to Earn Legend Tokens</p>
+
+    
+The easiest and most consistent way to earn Legend Tokens is simply by leveling your account.
+
+Every time you level up, you get a set amount of Legend Tokens.
+
+Early levels grant more tokens per level; the amount tapers off as you reach higher levels.
+
+Gain XP by playing matches — whether you win or lose — you’ll steadily gain tokens.
+
+Why it matters:
+Leveling is the backbone of your free currency grind. The more you play, the more tokens you earn naturally.
+
+<p>
+Pro Tip: Focus on playing regularly — even quick games add up over time. Aim for consistent XP gain to steadily rise in levels.</p>
+
+
+<p>
+2. Complete Daily and Weekly Challenges for Big Rewards</p>
+
+    
+Respawn provides daily and weekly challenges that reward you with Legend Tokens and Crafting Metals.
+
+Daily Challenges: Smaller tasks such as “Get 5 kills with a sniper” or “Play 3 matches.”
+
+Weekly Challenges: Bigger, longer-term goals offering higher-value rewards.
+
+You can select up to 3 daily challenges at a time, so pick the ones easiest or most fun for you.
+
+Why it’s effective:
+Challenges push you to diversify your gameplay and reward your efforts with valuable currencies.
+
+<p>
+Tip: Always check your challenges when you log in, and prioritize the ones that reward tokens or crafting materials.
+</p>
+
+ 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
 <!-- Werbung 62 -->
@@ -251,13 +472,77 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <h3>1. Level Up Your Account</h3>
-  <ul>
-    <li>Every time you level up your account, you earn Legend Tokens.</li>
-    <li>Early levels grant more tokens per level, tapering off as you progress.</li>
-    <li>Levels are earned simply by playing matches and gaining experience points (XP).</li>
-  </ul>
-  <p><strong>Tip:</strong> Focus on playing consistently and completing matches for steady XP gains.</p>
+  <p>3. Take Advantage of the Free Battle Pass Track</p>
+
+Each season features a Battle Pass with free and paid tracks.
+
+Even without buying the premium pass, the free track grants Crafting Metals, Apex Packs, and occasionally Legend Tokens.
+
+Progression depends on the XP you earn from playing and completing challenges.
+
+Why you should care:
+You’ll receive a steady drip of rewards across the season just for playing regularly.
+
+<p>
+Pro Tip: Complete your daily and weekly challenges to boost your Battle Pass level and unlock more rewards.</p>
+
+
+<p>
+4. Earn Apex Packs by Gaining XP</p>
+
+    
+Apex Packs are loot boxes containing cosmetics, Legend Tokens, and crafting materials.
+
+You earn 1 Apex Pack every 100 XP, capped at 100 packs.
+
+No purchase necessary — just play and rack up XP.
+
+Packs can drop rare items or crafting resources for your cosmetic collection.
+
+Why this matters:
+Apex Packs can be a goldmine for cosmetics and crafting materials without any cost.
+
+<p>
+Tip: Play steadily to ensure you don’t hit the pack cap and waste potential rewards.</p>
+
+
+<p>
+5. Participate in Seasonal Events and Limited-Time Modes (LTMs)</p>
+
+    
+Respawn regularly hosts events and LTMs that offer unique challenges and rewards.
+
+These events provide extra Legend Tokens, Crafting Metals, and exclusive cosmetics.
+
+Complete event-specific challenges to maximize rewards.
+
+LTMs add fun twists to gameplay and often increase reward rates.
+
+Why it’s beneficial:
+Events are some of the best opportunities for free currency and exclusive gear.
+
+<p>
+Tip: Keep an eye on official announcements and dive into events right away to not miss out.</p>
+
+
+<p>
+6. Play Ranked and Ranked Arenas for Bonus Rewards</p>
+
+    
+Ranked modes are competitive but also yield bonus XP and sometimes Crafting Metals.
+
+Some seasons grant special ranked rewards, including crafting materials.
+
+Ranked Arenas, a separate mode, offer similar bonuses.
+
+Improving your rank increases your end-of-season rewards.
+
+Why it’s worth it:
+Besides improving your skills, playing ranked unlocks bonus currencies unavailable in casual modes.
+
+<p>
+Tip: Start playing ranked as soon as you feel comfortable; steady improvement means steady rewards.
+</p>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
@@ -272,13 +557,67 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <h3>2. Complete Daily and Weekly Challenges</h3>
-  <ul>
-    <li>Challenges often reward Legend Tokens or Crafting Metals.</li>
-    <li>Tasks include dealing damage, getting kills, or placing top in matches.</li>
-    <li>Weekly challenges generally offer higher rewards but take longer to complete.</li>
-  </ul>
-  <p><strong>Tip:</strong> Prioritize completing challenges while playing your usual matches to maximize rewards effortlessly.</p>
+  <p>7. Check for Login Bonuses and Seasonal Promotions</p>
+
+    
+<p>While Apex Legends doesn’t have daily login rewards, Respawn occasionally rolls out:</p>
+
+<p>Seasonal login bonuses granting small amounts of Crafting Metals or Legend Tokens.</p>
+
+<p>Special promotions during holidays or major updates.</p>
+
+<p>Tip: Log in daily during active seasons or events — you never know when free bonuses will drop.</p>
+
+<p>8. Use Crafting Metals Wisely</p>
+
+<p>Crafting Metals are valuable and shouldn’t be wasted on every cosmetic.</p>
+
+<p>Save your metals for rare or event-exclusive items.</p>
+
+<p>Common skins and items might be easier or cheaper to get via Apex Packs or the store.</p>
+
+<p>Prioritize items you truly want to stand out.</p>
+
+<p>Why careful management matters:</p>
+
+<p>Maximizing crafting materials’ value means you get the coolest gear without wasting resources.</p>
+
+<p>Tip: Wait for high-value skins or event cosmetics before crafting.</p>
+
+<p>9. Watch for Giveaways and Community Events</p>
+
+<p>Respawn, popular streamers, and community creators often run giveaways offering Legend Tokens and Crafting Metals.</p>
+
+<p>These run on Twitch, Twitter, Instagram, or YouTube.</p>
+
+<p>Participation is usually free and easy.</p>
+
+<p>Tip: Follow Apex Legends’ official social accounts and favorite streamers to catch these giveaways.</p>
+
+<p>10. Play Consistently and Set Goals</p>
+
+<p>The single most important advice for free players:</p>
+
+<p>Playing regularly guarantees steady XP gains.</p>
+
+<p>Combining daily challenges, events, and ranked matches maximizes your earning potential.</p>
+
+<p>Set daily or weekly goals like finishing certain challenges or playing a set number of matches.</p>
+
+<p>Why this matters:</p>
+
+<p>Consistency compounds rewards over time — even short, focused sessions add up.</p>
+
+<p>Bonus Tips for Efficient Free-to-Play Progression</p>
+
+<p>Play in squads to increase win rate and XP.</p>
+
+<p>Prioritize challenges that overlap with your normal playstyle.</p>
+
+<p>Don’t rush crafting; save metals for the cosmetics you love.</p>
+
+<p>Try different Legends to complete varied challenges and keep gameplay fresh.</p>
+
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
@@ -293,12 +632,83 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <h3>3. Participate in Seasonal Battle Pass Free Track</h3>
-  <ul>
-    <li>The free Battle Pass track provides Crafting Metals, Apex Packs, and occasionally Legend Tokens.</li>
-    <li>Progression is tied to XP earned by playing matches and completing challenges.</li>
-  </ul>
-  <p><strong>Tip:</strong> Even if you don’t buy the Battle Pass, playing regularly will unlock free rewards over the season.</p>
+
+  <p>Summary Table: Free-to-Play Currency Sources</p>
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Currency</th>
+      <th>Frequency</th>
+      <th>Reward Potential</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Account Leveling</td>
+      <td>Legend Tokens</td>
+      <td>Ongoing</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Daily & Weekly Challenges</td>
+      <td>Tokens, Crafting Metals</td>
+      <td>Daily/Weekly</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Battle Pass Free Track</td>
+      <td>Crafting Metals</td>
+      <td>Seasonal</td>
+      <td>Medium to High</td>
+    </tr>
+    <tr>
+      <td>Apex Packs (XP-based)</td>
+      <td>Crafting Metals</td>
+      <td>Ongoing</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Events & LTMs</td>
+      <td>Tokens, Metals</td>
+      <td>Seasonal</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Ranked Modes</td>
+      <td>Tokens, Metals</td>
+      <td>Seasonal</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Login Bonuses & Promotions</td>
+      <td>Tokens, Metals</td>
+      <td>Occasional</td>
+      <td>Low to Medium</td>
+    </tr>
+    <tr>
+      <td>Smart Crafting Management</td>
+      <td>Crafting Metals</td>
+      <td>N/A</td>
+      <td>High (via saving)</td>
+    </tr>
+    <tr>
+      <td>Giveaways & Community Events</td>
+      <td>Tokens, Metals</td>
+      <td>Sporadic</td>
+      <td>Low to Medium</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>Final Thoughts: Master Apex Legends Without Spending a Dime</p>
+
+<p>Apex Legends offers multiple legit and rewarding ways to earn Legend Tokens and Crafting Metals without spending money.</p>
+
+<p>By combining steady play, completing challenges, diving into events, and managing your resources smartly, you can unlock your favorite Legends and deck them out in awesome cosmetics completely free.</p>
+
+<p>Stay consistent, play smart, and enjoy every thrilling drop of Apex Legends’ action-packed gameplay while building your in-game wealth!</p>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
@@ -313,134 +723,14 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <h3>4. Earn Apex Packs by Leveling Up</h3>
-  <ul>
-    <li>You earn one Apex Pack every 100 XP gained, up to a maximum of 100 packs.</li>
-    <li>Packs can be earned solely through gameplay — no purchase necessary.</li>
-    <li>Opening packs gives you the chance to get rare cosmetics and crafting materials.</li>
-  </ul>
-  <p><strong>Tip:</strong> Play consistently to hit XP milestones and claim your Apex Packs.</p>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 66 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="8955814061"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  <h3>5. Complete Events and Limited-Time Modes</h3>
-  <ul>
-    <li>Events include their own set of challenges and rewards.</li>
-    <li>Earn Crafting Metals, Apex Packs, and occasionally Legend Tokens.</li>
-  </ul>
-  <p><strong>Tip:</strong> Stay tuned to official Apex Legends channels for event announcements.</p>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 67 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="6944728391"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  <h3>6. Play Ranked and Ranked Arenas</h3>
-  <ul>
-    <li>Ranked modes reward players with extra XP and unique challenges.</li>
-    <li>Some seasons offer special rewards for ranked participation, including Crafting Metals.</li>
-  </ul>
-  <p><strong>Tip:</strong> Improve your skills gradually and participate in ranked to unlock these bonus rewards.</p>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 68 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="9802007789"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  <h3>7. Daily Login and Special Promotions</h3>
-  <p>While Apex Legends does not consistently offer daily login rewards, special promotions and seasonal login bonuses occasionally grant small amounts of Crafting Metals or Legend Tokens.</p>
-  <p><strong>Tip:</strong> Check the game often during seasons and major updates for these bonuses.</p>
-
-  <h3>8. Utilize Crafting Metals Wisely</h3>
-  <ul>
-    <li>Save Crafting Metals for exclusive items rather than small common skins.</li>
-    <li>Crafting is the best way to obtain rare or event-limited cosmetics.</li>
-  </ul>
-  <p><strong>Tip:</strong> Don’t rush to craft items—save metals for high-value cosmetics.</p>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 69 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="7175844440"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  <h3>9. Watch for Giveaways and Community Events</h3>
-  <p>Sometimes Respawn or community creators host giveaways or contests with Legend Tokens or Crafting Metals as prizes.</p>
-  <p><strong>Tip:</strong> Follow Apex Legends social media and popular streamers to catch these opportunities.</p>
-
-  <h3>10. Play Regularly and Stay Consistent</h3>
-  <ul>
-    <li>Each match you play contributes XP, which converts into Legend Tokens and Apex Packs over time.</li>
-    <li>Combining daily challenges and events boosts this gain even more.</li>
-  </ul>
-  <p><strong>Tip:</strong> Set a daily or weekly playtime goal to maximize currency earning.</p>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 70 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="3415164038"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  <h3>Final Tips for Efficient Free-to-Play Currency Farming</h3>
-  <ul>
-    <li>Always check your current daily and weekly challenges and focus on completing them.</li>
-    <li>Join a squad or community to enjoy the game more and improve your chances of winning.</li>
-    <li>Track your account level progress and plan which Legends you want to unlock first.</li>
-    <li>Manage your Crafting Metals carefully—prioritize cosmetics you truly want.</li>
-  </ul>
-
-  <h3>Summary</h3>
-  <p>Apex Legends provides multiple avenues to earn Legend Tokens and Crafting Metals completely free and legally through regular gameplay, challenges, and events. With patience and steady play, free-to-play players can unlock new Legends and customize their look without spending real money.</p>
-
-  <p>Stay active, complete your challenges, and enjoy the fast-paced thrill of Apex Legends while building your in-game wealth!</p>
+ 
   <p style="font-size: 14px; color: #888; margin-top: 30px;"><em>🕒 Last updated: June 2025</em></p>
 
 </section>
      </div>
 
-  <footer>
-    © 2025 Legit Game Currency Guide. All rights reserved.
+<footer>
+    © 2025 RewardRealms.com. All rights reserved.
   </footer>
 
   <script>
@@ -476,50 +766,13 @@
 </html>
   </div> <!-- Ende .content -->
 
-  <!-- Privacy Policy -->
-  <section id="privacy-policy" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.5;">
-    <h2>Privacy Policy</h2>
-    <p>We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with legal data protection regulations.</p>
-    <p>This website does not use any tracking tools or external analytics services. No personal data is stored or processed except for data you voluntarily provide (e.g., through contact forms).</p>
-    <p>Advertisements are served via Google AdSense, which may set cookies. For more details, please see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
-    <p>If you have any questions about data protection, you can contact us at any time.</p>
-  </section>
-
-  <section id="terms" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-  <h2>Terms of Use</h2>
-  <p>By using RewardRealms.com, you agree not to misuse the content or attempt to manipulate or game systems discussed on this website. All guides are for informational purposes only. We do not promote hacks, cheats, or illegal tools.</p>
-  <p>We are not affiliated with the game publishers mentioned. Game names and logos are trademarks of their respective owners.</p>
-</section>
-
-
   <!-- About Section -->
 <section id="about" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
   <h2>About RewardRealms</h2>
-  <p>RewardRealms is your go-to source for free and legal ways to earn in-game currency across popular titles like Fortnite, PUBG Mobile, Clash Royale, and more. We research and share the most reliable free-to-play strategies so you can game smarter — without spending money.</p>
-</section>
-<!-- Privacy Policy Section -->
-<section id="privacy-policy" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.6;">
-  <h2>Privacy Policy</h2>
-  <p>We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with legal data protection regulations.</p>
-  <p>This website does not use tracking tools or analytics services beyond basic ad personalization via Google AdSense. We do not store or process personal data except for information you voluntarily provide.</p>
-  <p>Advertisements are served via Google AdSense, which may set cookies. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> for details.</p>
+  <p>RewardRealms is your ultimate destination for discovering free and completely legal methods to earn in-game currency in popular games like Fortnite, PUBG Mobile, Clash Royale, and many more. As a longtime gamer, I have spent years searching for the best ways to earn in-game currencies without spending real money. Drawing from my personal experience and research, I share the most reliable and effective free-to-play strategies to help you level up and enjoy your favorite games without breaking the bank. I’m also a Brawl Stars YouTuber with over 600,000 subscribers, bringing my passion and knowledge to a large gaming community. With RewardRealms, I want to provide players with a clear overview of all legal and working methods out there — so you can avoid scams and focus on what really works. Join RewardRealms and unlock the secrets to maximizing your gaming experience for free!</p>
 </section>
 
-<!-- About Section -->
-<section id="about" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.6;">
-  <h2>About</h2>
-  <p><strong>RewardRealms.com</strong> is a free resource hub for gamers looking to earn in-game currencies like Robux, V-Bucks, CP, and more — all through legal and proven methods.</p>
-  <p>We provide detailed guides for popular games including Fortnite, Clash Royale, COD Mobile, and others, with a focus on free-to-play earning strategies.</p>
-  <p>The site is monetized through Google AdSense, similar to YouTube. This helps us keep all content free while maintaining transparency and quality.</p>
-</section>
-
-<!-- Terms of Use Section -->
-<section id="terms" style="max-width: 900px; margin: 40px auto 60px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.6;">
-  <h2>Terms of Use</h2>
-  <p>By accessing RewardRealms.com, you agree to use the information provided responsibly and for lawful purposes only. All guides and recommendations are for informational purposes and do not guarantee outcomes or rewards from third-party services or games.</p>
-  <p>You may not copy or reproduce content from this site without permission. We reserve the right to update or remove content at any time without notice.</p>
-  <p>Continued use of this site implies acceptance of these terms.</p>
-</section>
+   
 
 <section id="faq" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
   <h2>Frequently Asked Questions</h2>
@@ -539,6 +792,26 @@
   <h3>Can I request a guide for a specific game?</h3>
   <p>Absolutely! Just contact us through the About section or leave a comment where available — we love suggestions from the community.</p>
 </section>
+
+   <section id="terms" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <h2>Terms of Use</h2>
+  <p>By using RewardRealms.com, you agree not to misuse the content or attempt to manipulate or game systems discussed on this website. All guides are for informational purposes only. We do not promote hacks, cheats, or illegal tools.</p>
+  <p>We are not affiliated with the game publishers mentioned. Game names and logos are trademarks of their respective owners.</p>
+</section>
+
+
+  
+
+  <!-- Privacy Policy -->
+  <section id="privacy-policy" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.5;">
+    <h2>Privacy Policy</h2>
+    <p>We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with legal data protection regulations.</p>
+    <p>This website does not use any tracking tools or external analytics services. No personal data is stored or processed except for data you voluntarily provide (e.g., through contact forms).</p>
+    <p>Advertisements are served via Google AdSense, which may set cookies. For more details, please see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+    <p>If you have any questions about data protection, you can contact us at any time.</p>
+  </section>
+
+ 
 <section id="contact" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-size: 16px; line-height: 1.6;">
   <h2>Contact</h2>
   <p>Got questions, suggestions, or partnership inquiries?</p>
@@ -546,17 +819,87 @@
   <p>We typically respond within 24–48 hours.</p>
 </section>
 
-
-<footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
+<footer>
+ <footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
   © 2025 RewardRealms.com. All rights reserved. |
   <a href="#privacy-policy">Privacy Policy</a> |
   <a href="#about">About</a> |
   <a href="#terms">Terms of Use</a> |
   <a href="#contact">Contact</a>
 </footer>
+</footer>
 
-<script src="../js/tabs.js"></script>
+<script>
+  // Toggle Other Games Liste
+  const toggleBtn = document.getElementById('toggle-other-games');
+  const otherGamesList = document.getElementById('other-games-list');
+
+  toggleBtn.addEventListener('click', () => {
+    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+
+    if (isExpanded) {
+      otherGamesList.style.display = 'none';
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.textContent = 'Other Games ▼';
+    } else {
+      otherGamesList.style.display = 'flex';
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      toggleBtn.textContent = 'Other Games ▲';
+    }
+  });
+</script>
+
+
+
+
+
+   <script>
+  // Funktion zum Aktivieren eines Tabs
+  function activateTab(tabId) {
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+
+    const button = document.getElementById('tab-' + tabId);
+    const content = document.getElementById(tabId);
+
+    if (button && content) {
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+      content.classList.add('active');
+    }
+  }
+
+  // Event-Listener für Klicks auf Tabs
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const tabId = button.getAttribute('aria-controls');
+      activateTab(tabId);
+      // URL ohne Neuladen anpassen auf /tabId/
+      history.pushState(null, '', '/' + tabId + '/');
+    });
+  });
+
+  // Beim Laden der Seite den Tab aus der URL holen
+  window.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (path && document.getElementById('tab-' + path)) {
+      activateTab(path);
+    } else {
+      activateTab('brawlstars'); // Standard-Tab
+    }
+  });
+
+  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
+  });
+</script>
 </body>
 </html>
-
-
