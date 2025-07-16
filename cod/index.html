@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <link rel="canonical" href="https://rewardrealms.com/cod/" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MLVZBNND22"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MLVZBNND22"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MLVZBNND22');
-  </script>
-  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008" crossorigin="anonymous"></script>
-  
+  gtag('config', 'G-MLVZBNND22');
+</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
+     crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <meta name="description" content="Earn free in-game currency in games like Fortnite, Brawl Stars, Clash Royale, PUBG Mobile and more – 100% legal and safe methods." />
-  
+  <link rel="canonical" href="https://rewardrealms.com/" />
+   <meta name="description" content="Earn free in-game currency in games like Fortnite, Brawl Stars, Clash Royale, PUBG Mobile and more – 100% legal and safe methods." />
   <!-- Open Graph (Facebook, Discord, etc.) -->
-  <meta property="og:title" content="RewardRealms – Free In-Game Currency Guides" />
-  <meta property="og:description" content="Learn how to earn free, legal currency in Fortnite, PUBG, Clash Royale and more. 100% safe and free-to-play friendly." />
-  <meta property="og:image" content="https://rewardrealms.com/banner.jpg" />
-  <meta property="og:url" content="https://rewardrealms.com/cod/" />
-  
-  <meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="RewardRealms – Free In-Game Currency Guides" />
+<meta property="og:description" content="Learn how to earn free, legal currency in Fortnite, PUBG, Clash Royale and more. 100% safe and free-to-play friendly." />
+<meta property="og:image" content="https://rewardrealms.com/banner.jpg" />
+<meta property="og:url" content="https://rewardrealms.com" />
+<meta name="twitter:card" content="summary_large_image" />
 
  <title>Free Gems, Robux & V-Bucks – Official Methods</title>
 <link rel="icon" type="image/png" href="/favicon.png" />
   <style>
   /* Make tabs stack vertically on small screens */
+/* Make tabs stack vertically on small screens */
 @media (max-width: 768px) {
   .tab-buttons {
     display: flex;
@@ -39,12 +36,11 @@
   }
 
   .tab-buttons button {
-  flex: 0 0 auto;
-  white-space: nowrap;
-  font-size: 1rem;
-  padding: 12px;
-}
-
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 1rem;
+    padding: 12px;
+  }
 
   .tab-content {
     padding: 1rem;
@@ -61,39 +57,36 @@
     margin: 1.5rem 0;
   }
 }
+
 .tab-buttons {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  flex-direction: column; /* vertikal anordnen */
   gap: 10px;
   margin-bottom: 1rem;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
+  overflow-x: visible;    /* kein horizontaler Scroll */
+  -webkit-overflow-scrolling: auto; /* optional, kann weg */
+  scrollbar-width: auto;             /* optional, kann weg */
 }
 
+/* scrollbar ausblenden ist jetzt nicht nötig, da kein Scroll */
 .tab-buttons::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
 
-/* Ensure tables don’t overflow on mobile */
-.tab-content table {
-  max-width: 100%;
-  overflow-x: auto;
-  word-wrap: break-word;
-}
-
-    body {
+/* Global Layout */
+body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #222;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   margin: 0;
   padding: 0;
   line-height: 1.6;
   font-size: 20px;
 }
 
-    header {
+/* Header (Hero) */
+header {
   width: 100vw;
   margin: 0 auto;
   padding: 0;
@@ -106,114 +99,302 @@
   color: white;
   text-align: center;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  border-radius: 0;
+}
+
+/* Tab-Leiste */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox*/
+  justify-content: center;  /* <-- diese Zeile einfügen */
 }
 
 
-    .tabs {
-      display: flex;
-      justify-content: center;
-      background-color: #ddd;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 20px;
-      user-select: none;
-    }
-    .tab-button {
-      cursor: pointer;
-      padding: 15px 30px;
-      font-weight: bold;
-      color: #555;
-      border: none;
-      background: none;
-      border-bottom: 3px solid transparent;
-      transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-      flex-grow: 1;
-      text-align: center;
-    }
-    .tab-button:hover {
-      background-color: #ccc;
-      color: #222;
-    }
-    .tab-button.active {
-      border-bottom: 3px solid #ffcc00;
-      background-color: #fff;
-      color: #222;
-    }
-    .content {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      min-height: 400px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      color: #222;
-    }
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    .ad-slot {
-      background-color: #f0f0f0;
-      color: #555;
-      text-align: center;
-      padding: 15px;
-      margin: 15px 0;
-      border: 2px dashed #ccc;
-      border-radius: 10px;
-      font-style: italic;
-      user-select: none;
-    }
-    footer {
-      max-width: 900px;
-      margin: 40px auto 0;
-      text-align: center;
-      font-size: 14px;
-      color: #888;
-      font-style: italic;
-    }
+.tab-buttons::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+/* Soft-Fade an den Seiten der Tab-Leiste */
+.tab-buttons-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-buttons::before,
+.tab-buttons::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.tab-buttons::before {
+  left: 0;
+  background: linear-gradient(to right, #f7f7f7 0%, transparent 100%);
+}
+
+.tab-buttons::after {
+  right: 0;
+  background: linear-gradient(to left, #f7f7f7 0%, transparent 100%);
+}
+
+/* Optional: Tabs umbrechen auf kleinen Bildschirmen */
+@media (max-width: 768px) {
+  .tab-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tab-button {
+    flex: 1 1 45%;
+    margin: 5px 0;
+  }
+}
+
+.tab-button {
+  cursor: pointer;
+  padding: 18px 40px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #555;
+  background: none;
+  border: 2px solid #ccc;  /* dezenter grauer Rahmen */
+  border-radius: 14px;
+  border-bottom: none !important;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s;
+  flex-grow: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tab-button:hover {
+  background-color: #f3f4f6;
+  border-color: #3b82f6;
+  color: #1e40af;
+  transform: scale(1.03);
+}
+
+.tab-button.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  box-shadow: none; /* Entfernt den Schatten */
+  transform: scale(1.05);
+  border-bottom: none !important;
+}
+ 
+/* Content-Karten */
+.content {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  color: var(--color-text);
+}
+
+/* Tabellen & Inhalte */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.tab-content table {
+  max-width: 100%;
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+
+/* Werbe-Slots */
+.ad-slot {
+  background-color: #fefce8;
+  color: #92400e;
+  text-align: center;
+  padding: 15px;
+  margin: 15px 0;
+  border: 2px dashed #fcd34d;
+  border-radius: 10px;
+  font-style: italic;
+  user-select: none;
+}
+
+/* Footer */
+footer {
+  max-width: 900px;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* Optional: Buttons für z. B. "Jetzt starten" */
+.btn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out, transform 0.1s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.tab-button,
+.tab-button.active {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.tabs {
+  box-shadow: none !important;
+}
+ 
   </style>
 </head>
 <body>
 
   <header>
-    <h2>🎮 Earn Free In-Game Currency & Resources for Your Favorite Games – 100% Legal!</h2>
-  </header>
+  <h2>🎮 Earn Free In-Game Currency & Resources for Your Favorite Games – 100% Legal!</h2>
+</header>
 
-    <div class="tab-buttons" role="tablist">
+<div class="tab-buttons-wrapper">
+  <div class="tab-buttons" role="tablist">
+    <!-- Haupt-Games als sichtbare Links -->
+    <a href="/brawlstars/" class="tab-button" role="tab" aria-selected="false" aria-controls="brawlstars" id="tab-brawlstars">Brawl Stars</a>
+    <a href="/roblox/" class="tab-button" role="tab" aria-selected="false" aria-controls="roblox" id="tab-roblox">Roblox</a>
+    <a href="/fortnite/" class="tab-button" role="tab" aria-selected="false" aria-controls="fortnite" id="tab-fortnite">Fortnite</a>
 
-    <button class="tab-button" role="tab" aria-selected="false" aria-controls="brawlstars" id="tab-brawlstars">Brawl Stars</button>
-<button class="tab-button active" role="tab" aria-selected="true" aria-controls="roblox" id="tab-roblox">Roblox</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="fortnite" id="tab-fortnite">Fortnite</button>
-
-<!-- ✅ Set this one as active -->
-<button class="tab-button active" role="tab" aria-selected="true" aria-controls="cod" id="tab-cod">Call of Duty</button>
-
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="clashroyale" id="tab-clashroyale">Clash Royale</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="genshin" id="tab-genshin">Genshin Impact</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="apex" id="tab-apex">Apex Legends</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="fifa" id="tab-fifa">FIFA / EA FC</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="minecraft" id="tab-minecraft">Minecraft</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="pubg" id="tab-pubg">PUBG Mobile</button>
-
-  
-
-
-
+    <!-- Other Games Toggle Button bleibt Button zum Aufklappen -->
+    <button class="tab-button" id="toggle-other-games" aria-expanded="false" aria-controls="other-games-list">Other Games ▼</button>
   </div>
 
+  <!-- Versteckte Liste mit weiteren Games als Links -->
+  <div id="other-games-list" style="display: none; flex-direction: column; gap: 8px; margin-top: 10px;" role="tabpanel" aria-labelledby="toggle-other-games">
+    <a href="/cod/" class="tab-button active" role="tab" aria-selected="true" aria-controls="cod" id="tab-cod">Call of Duty</a>
+    <a href="/clashroyale/" class="tab-button" role="tab" aria-selected="false" aria-controls="clashroyale" id="tab-clashroyale">Clash Royale</a>
+    <a href="/genshin/" class="tab-button" role="tab" aria-selected="false" aria-controls="genshin" id="tab-genshin">Genshin Impact</a>
+    <a href="/apex/" class="tab-button" role="tab" aria-selected="false" aria-controls="apex" id="tab-apex">Apex Legends</a>
+    <a href="/fifa/" class="tab-button" role="tab" aria-selected="false" aria-controls="fifa" id="tab-fifa">FIFA / EA FC</a>
+    <a href="/minecraft/" class="tab-button" role="tab" aria-selected="false" aria-controls="minecraft" id="tab-minecraft">Minecraft</a>
+    <a href="/pubg/" class="tab-button" role="tab" aria-selected="false" aria-controls="pubg" id="tab-pubg">PUBG Mobile</a>
+  </div>
+</div>
+
+
+
+<script>
+  // Funktion zum Aktivieren eines Tabs
+  function activateTab(tabId) {
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+
+    const button = document.getElementById('tab-' + tabId);
+    const content = document.getElementById(tabId);
+
+    if (button && content) {
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+      content.classList.add('active');
+    }
+  }
+
+  // Referenz auf Other Games Button und Liste
+  const otherGamesToggle = document.getElementById('toggle-other-games');
+  const otherGamesList = document.getElementById('other-games-list');
+
+  // Klick-Event für alle Tab-Buttons
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      // Wenn der Button der "Other Games" Toggle ist:
+      if (button === otherGamesToggle) {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        if (isExpanded) {
+          // Liste zuklappen
+          otherGamesList.style.display = 'none';
+          button.setAttribute('aria-expanded', 'false');
+          button.textContent = 'Other Games ▼';
+        } else {
+          // Liste aufklappen
+          otherGamesList.style.display = 'flex';
+          button.setAttribute('aria-expanded', 'true');
+          button.textContent = 'Other Games ▲';
+        }
+        // Keine Tab-Aktivierung oder Content-Wechsel!
+        return;
+      }
+
+      // Sonst normalen Tab wechseln
+      const tabId = button.getAttribute('aria-controls');
+      activateTab(tabId);
+
+      // Other Games Liste zuklappen, wenn offen
+      otherGamesList.style.display = 'none';
+      otherGamesToggle.setAttribute('aria-expanded', 'false');
+      otherGamesToggle.textContent = 'Other Games ▼';
+
+      // URL anpassen (optional)
+      history.pushState(null, '', '/' + tabId + '/');
+    });
+  });
+
+  // Beim Laden der Seite den Tab aus der URL holen
+  window.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (path && document.getElementById('tab-' + path)) {
+      activateTab(path);
+    } else {
+      activateTab('brawlstars'); // Standard-Tab
+    }
+  });
+
+  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
+  });
+</script>
+
   <div class="content">
- <!-- Call of Duty Content -->
-<section id="cod" role="tabpanel" aria-labelledby="tab-cod" class="tab-content active">
+    <!-- Call of Duty Content -->
+<section id="cod" role="tabpanel" aria-labelledby="tab-cod" class="tab-content">
   <h2>🎖️ Call of Duty: Warzone / CoD Mobile – Complete Free-to-Play CP Farming Guide</h2>
-  <!-- mehr Inhalt hier -->
-</section>
 
-
-  <p>In both Call of Duty: Warzone and Call of Duty: Mobile, CoD Points (CP) serve as the premium currency. They are essential for purchasing cosmetics, Battle Passes, bundles, and sometimes unlocking limited-time modes or characters. However, spending real money isn’t the only way to obtain CP. This detailed guide breaks down every legal and efficient method for Free-to-Play (F2P) players to earn CP without spending a cent.</p>
+  <p>💸 Don’t waste real money on CP when there are 100% legal, safe, and clever ways to get it for free. If you stick to this guide, you’ll build up a CP stash season after season — just like smart F2P players do.
+Whether you're grinding in Warzone or playing on the go in CoD Mobile, CoD Points (CP) are the premium currency for everything: Battle Passes, operator bundles, weapon skins, crate spins, and more. But here’s the truth — you don’t have to pay to win.
+This guide shows you how to earn CP completely free, using proven methods that thousands of players are already using in 2025. Let’s get started.
+</p>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
@@ -228,16 +409,66 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <h3>1. Battle Pass Strategy: Recycle Your CP</h3>
-  <p>One of the most sustainable methods to get CP as a free player is through the Battle Pass system, especially in CoD Mobile.</p>
-  <ul>
-    <li><strong>Initial Investment Required:</strong> If you can obtain the Battle Pass once—through Google Opinion Rewards, gift cards, or event CP—you can reinvest your earned CP into the next season.</li>
-    <li><strong>Typical Earnings:</strong> Each Battle Pass gives back up to 560 CP when completed, and the pass itself usually costs 560 CP.</li>
-    <li><strong>Efficiency Tips:</strong> Focus on daily missions, weekly objectives, and seasonal tasks to max out the tiers before the season ends.</li>
-  </ul>
-  <p><strong>Warzone vs. CoD Mobile:</strong><br>
-  • Warzone (console/PC) doesn't allow earning CP through free Battle Pass tracks.<br>
-  • CoD Mobile provides CP rewards through its premium track and is easier to recycle.</p>
+  <p>✅ 1. Battle Pass Strategy – Recycle Your CP (CoD Mobile)</p>
+
+    
+<p>The smartest long-term method is to buy the Battle Pass once and then recycle the CP you earn from it — so you never have to pay again.</p>
+
+<p>🎯 The Strategy:</p>
+
+<p>• Initial cost: 560 CP for the Battle Pass</p>
+
+<p>• Max return: 560 CP earned by reaching Tier 50</p>
+
+<p>• Result: You can buy the next season’s pass for free — forever</p>
+
+<p>How to Max Out Quickly:</p>
+
+<p>• Complete daily and weekly missions</p>
+
+<p>• Join an active clan for bonus objectives</p>
+
+<p>• Play Ranked MP & BR modes for XP boosts</p>
+
+<p>🔁 Repeat this each season and you’ll stay on the CP loop without spending a cent.</p>
+
+<p>📌 Note: This does not apply to Warzone — that Battle Pass doesn’t give free CP unless you’ve already purchased it.</p>
+
+<p>✅ 2. Limited-Time Events and Seasonal Challenges</p>
+
+<p>Call of Duty runs special events all the time — and occasionally, they give out CP.</p>
+
+<p>Where to Look:</p>
+
+<p>• 🎯 Daily login streaks</p>
+
+<p>• 🎉 Anniversary & holiday events</p>
+
+<p>• 🧩 Puzzle or progress-based events</p>
+
+<p>• 🔥 Special BR/MP themed missions</p>
+
+<p>Example:</p>
+
+<p>During CoD Mobile’s 3rd Anniversary, players earned CP for logging in daily, finishing matches, and completing celebration missions.</p>
+
+<p>📅 Tip: Track upcoming events via the in-game calendar or community Reddit/Discord.</p>
+
+<p>✅ 3. Official Tournaments and Contests</p>
+
+<p>Where CP Is the Prize:</p>
+
+<p>• 🏆 Ranked mode end-of-season rewards</p>
+
+<p>• 🎮 CoD Mobile official esports events</p>
+
+<p>• 🎯 Reddit challenges & Discord contests</p>
+
+<p>• 🖥️ Warzone: Community-based Warzone cups or kill-race tournaments</p>
+
+<p>🎖️ Even small placements in bracket-based competitions sometimes get you CP or Battle Passes.</p>
+
+<p>🎯 Tip: Platforms like ESL, Game.tv, and Toornament often host free-entry tourneys with rewards.</p>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
@@ -252,14 +483,72 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <h3>2. Limited-Time Events and Challenges</h3>
-  <p>Call of Duty frequently features seasonal events, missions, and challenges. While most rewards consist of crates, skins, and XP boosts, some contain CP.</p>
-  <ul>
-    <li>Daily & Weekly Challenges: Occasionally include CP in CoD Mobile.</li>
-    <li>Seasonal Events: Some are themed around holidays and anniversaries and offer more lucrative rewards.</li>
-    <li><strong>Example:</strong> During CoD Mobile’s 3rd Anniversary, select events included CP as a reward for logging in and completing objectives.</li>
-  </ul>
-  <p><strong>Tip:</strong> Track in-game event calendars and community forums to prepare in advance.</p>
+  <p>✅ 4. Google Opinion Rewards – Fast CP Without Playing</p>
+
+    
+<p>This is the #1 non-gaming way to earn CP for free.</p>
+
+<p>📱 How it Works:</p>
+
+<p>• Download Google Opinion Rewards (Android)</p>
+
+<p>• Get 10–30 sec surveys every few days</p>
+
+<p>• Earn Google Play balance automatically</p>
+
+<p>• Use your balance to buy CP in CoD Mobile</p>
+
+<p>💸 Typical Earnings: $2–5/month (sometimes more in big cities)</p>
+
+<p>⚡ Use this to buy your first Battle Pass — then recycle from there.</p>
+
+<p>✅ 5. Tapjoy Offers (CoD Mobile Only)</p>
+
+<p>CoD Mobile sometimes adds Tapjoy-style offers inside the CP section.</p>
+
+<p>How It Works:</p>
+
+<p>• Complete offers (like installing & leveling up in a new game)</p>
+
+<p>• Earn CP when verified</p>
+
+<p>🧠 Tip: Choose offers that are free-to-complete, like watching ads, signing up for newsletters, or quick app installs.</p>
+
+<p>⚠️ Avoid shady offers asking for personal data or purchases. Read user reviews!</p>
+
+<p>✅ 6. Influencer Giveaways (YouTube, TikTok, Discord)</p>
+
+<p>Every major season or update, creators run giveaways to boost engagement.</p>
+
+<p>Where to Find Real Ones:</p>
+
+<p>• 🎥 YouTube: CoD Mobile news/content channels</p>
+
+<p>• 📱 TikTok: Skin reviewers or challenge creators</p>
+
+<p>• 🗣️ Discord: Tournament or event-based servers</p>
+
+<p>• 🐦 Twitter/X: Retweet/follow giveaways during new season drops</p>
+
+<p>🎯 Tip: Follow creators like BobbyPlays, iFerg, or HawksNest, who regularly give back to their community.</p>
+
+<p>⚠️ Never give your login details to join a giveaway.</p>
+
+<p>✅ 7. In-Game Achievements & Clan Activity</p>
+
+<p>CoD Mobile includes achievement-based rewards, and some offer direct CP.</p>
+
+<p>Check these areas:</p>
+
+<p>• 🏅 Profile > Achievements tab</p>
+
+<p>• 🎖️ Ranked Match Rewards</p>
+
+<p>• 👥 Clan rewards (weekly crate or CP bonuses)</p>
+
+<p>Joining an active clan boosts your passive income and makes it easier to finish weekly missions.</p>
+
+<p>🔁 Some achievements also unlock crate coupons — and crates can occasionally give you CP.</p>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
@@ -274,14 +563,108 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <h3>3. Official Tournaments and Contests</h3>
-  <p>Activision and various community platforms regularly host tournaments or sweepstakes that reward top players with CP, cosmetics, or Battle Passes.</p>
-  <ul>
-    <li>Ranked Tournaments: Players in higher tiers may qualify for seasonal rewards.</li>
-    <li>Esports Contests: Keep an eye on the CoD Mobile Esports scene.</li>
-    <li>Community Challenges: Check the official Call of Duty Discord or subreddit.</li>
-  </ul>
-  <p>Platforms like Game.tv and ESL also host community-run CoD tournaments that sometimes offer CP as prizes.</p>
+ <p>✅ 8. Watch Ads for Crates or Bonuses</p>
+
+   
+<p>While not directly paying CP, CoD Mobile lets you watch ads for free crates or coupons.</p>
+
+<p>🎁 Some crates have:</p>
+
+<p>• CP fragments</p>
+
+<p>• Exchangeable currency (for bundles)</p>
+
+<p>• Skins you can convert later</p>
+
+<p>📌 Tip: Check the Featured or Free tabs in the store daily.</p>
+
+<p>✅ 9. Xbox & PlayStation Users: Microsoft Rewards (Warzone)</p>
+
+<p>If you're on console, use Microsoft Rewards to earn CP indirectly.</p>
+
+<p>How:</p>
+
+<p>• Complete daily Bing searches</p>
+
+<p>• Do Xbox Game Pass quests</p>
+
+<p>• Earn points, redeem for Xbox gift cards</p>
+
+<p>• Use gift cards to buy CP or the Battle Pass in Warzone</p>
+
+<p>🎯 Bonus: This also works if your Warzone account is linked to Xbox on PC.</p>
+
+   
+<p>
+✅ 10. Save and Spend CP Wisely</p>
+
+   
+<p>
+A crucial part of F2P strategy is not wasting CP.</p>
+
+<p>
+Smart Spending Tips:</p>
+
+<p>
+•	Prioritize the Battle Pass (best CP return)</p>
+
+<p>
+•	Only buy time-limited skins if they offer real value (e.g., buffs, tier skips)</p>
+
+<p>
+•	Wait for discounted bundles or return rotations</p>
+
+<p>
+🧠 Use your CP on things that give long-term progression, not temporary flexes.</p>
+
+<p>
+📌 Summary: F2P CP Farming Roadmap</p>
+
+<p>
+💼 Method	🎯 CP Potential	⏱️ Frequency	📌 Best For</p>
+
+<p>
+Battle Pass Recycle	High	Seasonal	Long-term players</p>
+
+<p>
+Events & Challenges	Medium	Monthly	Regular players</p>
+
+<p>
+Google Rewards	Medium	Weekly	First-time buyers</p>
+
+<p>
+Tapjoy Offers	Medium	One-time bursts	App-savvy users</p>
+
+<p>
+Giveaways	Varies	Random	Lucky boosts</p>
+
+<p>
+Clan & Achievements	Low-Mid	Weekly	Casual grinders</p>
+
+<p>
+Microsoft Rewards	Mid-High	Weekly	Console/PC users</p>
+
+<p>
+🎯 Final Words: CP Without Cash Is Possible</p>
+
+<p>
+You don’t need a credit card to dominate in Call of Duty. By using a smart strategy, patience, and stacking multiple methods, you can:</p>
+
+<p>
+•	Unlock premium Battle Passes every season</p>
+
+<p>
+•	Get elite operator skins and epic weapon blueprints</p>
+
+<p>
+•	Never fall behind the meta — all without paying a single dollar</p>
+
+<p>
+🔖 Bookmark this guide, and stay on top of new events, offers, and tricks. In 2025, the grind is real — but so are the rewards.</p>
+
+<p>
+Ready to build your CP empire? 🧠 Let’s go.
+</p>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
@@ -296,147 +679,15 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <h3>4. External Earning Tools: Google Opinion Rewards</h3>
-  <p>For players who can't yet afford their first Battle Pass, Google Opinion Rewards is a goldmine.</p>
-  <ul>
-    <li><strong>How It Works:</strong> Install the app, answer surveys, and receive Google Play credit.</li>
-    <li><strong>Average Earnings:</strong> You can earn $1–$3 per week depending on your location and activity.</li>
-    <li><strong>Use Case:</strong> Buy CP directly or purchase a Battle Pass to start the recycle loop.</li>
-  </ul>
-  <p><strong>Alternatives:</strong><br>
-  • Swagbucks, Mistplay (Android), or Microsoft Rewards for Xbox users.<br>
-  • Redeem earned points for gift cards usable in-store for CP purchases.</p>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 35 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="6807614134"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  <h3>5. Free CP Through Creator Giveaways</h3>
-  <p>Influencers and streamers occasionally offer CP giveaways during events, milestones, or collaborations.</p>
-  <ul>
-    <li><strong>Where to Look:</strong> YouTube, Twitter/X, TikTok, and Discord.</li>
-    <li><strong>Legitimacy Check:</strong> Make sure the creator is verified or known in the community.</li>
-    <li><strong>Best Times:</strong> During Battle Pass launches, new season events, or esports finals.</li>
-  </ul>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 36 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="9722100822"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  <h3>6. Completing Achievements and Progression Milestones</h3>
-  <p>In CoD Mobile, completing certain in-game tasks like leveling up or unlocking ranked tiers can lead to CP rewards or free crates with the potential to earn CP indirectly.</p>
-  <ul>
-    <li><strong>Achievements Tab:</strong> Review this section for missions that offer CP or valuable items you can trade or use.</li>
-    <li><strong>Clan Activity:</strong> Being part of an active clan that completes weekly objectives can bring in extra rewards.</li>
-  </ul>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 37 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="2868369128"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  <h3>7. Tapjoy Offers (in CoD Mobile)</h3>
-  <p>CoD Mobile occasionally includes Tapjoy-style offers in the CP store:</p>
-  <ul>
-    <li><strong>What to Do:</strong> Complete offers (e.g., install and play a game to level 10) to earn CP.</li>
-    <li><strong>Warning:</strong> Offers can vary in reliability—read reviews before participating.</li>
-    <li><strong>Best Offers:</strong> Those that reward CP for watching videos or downloading free apps.</li>
-  </ul>
-  <p><strong>Never use unofficial CP generators—these violate ToS and can result in bans.</strong></p>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 38 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="4217109818"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  <h3>8. Watch Ads for Small Rewards (Mobile Only)</h3>
-  <p>CoD Mobile occasionally allows users to watch ads for small, stackable rewards like XP cards or crate coupons.</p>
-  <p>While not directly awarding CP, some crates have a chance to yield CP or exchangeable currency.</p>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 39 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="8427817565"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  <h3>9. Save CP Wisely</h3>
-  <ul>
-    <li>Don’t impulse spend: Save CP for Battle Passes or time-limited events.</li>
-    <li>Track Prices: Some bundles go on sale or rotate out—waiting can save you CP.</li>
-  </ul>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 40 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="8133702890"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  <h3>Summary: F2P CP Farming Roadmap</h3>
-  <table style="width:100%; border-collapse: collapse;" border="1" cellpadding="8">
-    <tr><th>Method</th><th>CP Potential</th><th>Frequency</th><th>Best For</th></tr>
-    <tr><td>Battle Pass Recycling</td><td>High</td><td>Seasonal</td><td>Long-term strategy</td></tr>
-    <tr><td>Events & Challenges</td><td>Low-Mid</td><td>Weekly/Monthly</td><td>Steady progression</td></tr>
-    <tr><td>Google Opinion Rewards</td><td>Mid</td><td>Weekly</td><td>Starting the Battle Pass loop</td></tr>
-    <tr><td>Creator Giveaways</td><td>Varies</td><td>Random</td><td>Lucky boosts</td></tr>
-    <tr><td>Tapjoy Offers</td><td>Medium</td><td>Limited time</td><td>App-savvy players</td></tr>
-  </table>
-
-  <p>By combining these methods consistently, you can enjoy the game’s premium features without ever spending real money. It takes some patience and planning, but many successful F2P players manage to unlock skins, operators, and even weapons this way.</p>
   <p style="font-size: 14px; color: #888; margin-top: 30px;"><em>🕒 Last updated: June 2025</em></p>
 
-</section>
-    </div>
+  
 
-  <footer>
-    © 2025 Legit Game Currency Guide. All rights reserved.
+</section>
+     </div>
+
+<footer>
+    © 2025 RewardRealms.com. All rights reserved.
   </footer>
 
   <script>
@@ -472,50 +723,13 @@
 </html>
   </div> <!-- Ende .content -->
 
-  <!-- Privacy Policy -->
-  <section id="privacy-policy" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.5;">
-    <h2>Privacy Policy</h2>
-    <p>We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with legal data protection regulations.</p>
-    <p>This website does not use any tracking tools or external analytics services. No personal data is stored or processed except for data you voluntarily provide (e.g., through contact forms).</p>
-    <p>Advertisements are served via Google AdSense, which may set cookies. For more details, please see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
-    <p>If you have any questions about data protection, you can contact us at any time.</p>
-  </section>
-
-  <section id="terms" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-  <h2>Terms of Use</h2>
-  <p>By using RewardRealms.com, you agree not to misuse the content or attempt to manipulate or game systems discussed on this website. All guides are for informational purposes only. We do not promote hacks, cheats, or illegal tools.</p>
-  <p>We are not affiliated with the game publishers mentioned. Game names and logos are trademarks of their respective owners.</p>
-</section>
-
-
   <!-- About Section -->
 <section id="about" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
   <h2>About RewardRealms</h2>
-  <p>RewardRealms is your go-to source for free and legal ways to earn in-game currency across popular titles like Fortnite, PUBG Mobile, Clash Royale, and more. We research and share the most reliable free-to-play strategies so you can game smarter — without spending money.</p>
-</section>
-<!-- Privacy Policy Section -->
-<section id="privacy-policy" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.6;">
-  <h2>Privacy Policy</h2>
-  <p>We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with legal data protection regulations.</p>
-  <p>This website does not use tracking tools or analytics services beyond basic ad personalization via Google AdSense. We do not store or process personal data except for information you voluntarily provide.</p>
-  <p>Advertisements are served via Google AdSense, which may set cookies. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> for details.</p>
+  <p>RewardRealms is your ultimate destination for discovering free and completely legal methods to earn in-game currency in popular games like Fortnite, PUBG Mobile, Clash Royale, and many more. As a longtime gamer, I have spent years searching for the best ways to earn in-game currencies without spending real money. Drawing from my personal experience and research, I share the most reliable and effective free-to-play strategies to help you level up and enjoy your favorite games without breaking the bank. I’m also a Brawl Stars YouTuber with over 600,000 subscribers, bringing my passion and knowledge to a large gaming community. With RewardRealms, I want to provide players with a clear overview of all legal and working methods out there — so you can avoid scams and focus on what really works. Join RewardRealms and unlock the secrets to maximizing your gaming experience for free!</p>
 </section>
 
-<!-- About Section -->
-<section id="about" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.6;">
-  <h2>About</h2>
-  <p><strong>RewardRealms.com</strong> is a free resource hub for gamers looking to earn in-game currencies like Robux, V-Bucks, CP, and more — all through legal and proven methods.</p>
-  <p>We provide detailed guides for popular games including Fortnite, Clash Royale, COD Mobile, and others, with a focus on free-to-play earning strategies.</p>
-  <p>The site is monetized through Google AdSense, similar to YouTube. This helps us keep all content free while maintaining transparency and quality.</p>
-</section>
-
-<!-- Terms of Use Section -->
-<section id="terms" style="max-width: 900px; margin: 40px auto 60px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.6;">
-  <h2>Terms of Use</h2>
-  <p>By accessing RewardRealms.com, you agree to use the information provided responsibly and for lawful purposes only. All guides and recommendations are for informational purposes and do not guarantee outcomes or rewards from third-party services or games.</p>
-  <p>You may not copy or reproduce content from this site without permission. We reserve the right to update or remove content at any time without notice.</p>
-  <p>Continued use of this site implies acceptance of these terms.</p>
-</section>
+   
 
 <section id="faq" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
   <h2>Frequently Asked Questions</h2>
@@ -535,6 +749,26 @@
   <h3>Can I request a guide for a specific game?</h3>
   <p>Absolutely! Just contact us through the About section or leave a comment where available — we love suggestions from the community.</p>
 </section>
+
+   <section id="terms" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <h2>Terms of Use</h2>
+  <p>By using RewardRealms.com, you agree not to misuse the content or attempt to manipulate or game systems discussed on this website. All guides are for informational purposes only. We do not promote hacks, cheats, or illegal tools.</p>
+  <p>We are not affiliated with the game publishers mentioned. Game names and logos are trademarks of their respective owners.</p>
+</section>
+
+
+  
+
+  <!-- Privacy Policy -->
+  <section id="privacy-policy" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.5;">
+    <h2>Privacy Policy</h2>
+    <p>We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with legal data protection regulations.</p>
+    <p>This website does not use any tracking tools or external analytics services. No personal data is stored or processed except for data you voluntarily provide (e.g., through contact forms).</p>
+    <p>Advertisements are served via Google AdSense, which may set cookies. For more details, please see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+    <p>If you have any questions about data protection, you can contact us at any time.</p>
+  </section>
+
+ 
 <section id="contact" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-size: 16px; line-height: 1.6;">
   <h2>Contact</h2>
   <p>Got questions, suggestions, or partnership inquiries?</p>
@@ -542,17 +776,90 @@
   <p>We typically respond within 24–48 hours.</p>
 </section>
 
-
-<footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
+<footer>
+ <footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
   © 2025 RewardRealms.com. All rights reserved. |
   <a href="#privacy-policy">Privacy Policy</a> |
   <a href="#about">About</a> |
   <a href="#terms">Terms of Use</a> |
   <a href="#contact">Contact</a>
 </footer>
+</footer>
 
-<script src="../js/tabs.js"></script>
+<script>
+  // Toggle Other Games Liste
+  const toggleBtn = document.getElementById('toggle-other-games');
+  const otherGamesList = document.getElementById('other-games-list');
+
+  toggleBtn.addEventListener('click', () => {
+    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+
+    if (isExpanded) {
+      otherGamesList.style.display = 'none';
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.textContent = 'Other Games ▼';
+    } else {
+      otherGamesList.style.display = 'flex';
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      toggleBtn.textContent = 'Other Games ▲';
+    }
+  });
+</script>
+
+
+
+
+
+   <script>
+  // Funktion zum Aktivieren eines Tabs
+  function activateTab(tabId) {
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+
+    const button = document.getElementById('tab-' + tabId);
+    const content = document.getElementById(tabId);
+
+    if (button && content) {
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+      content.classList.add('active');
+    }
+  }
+
+  // Event-Listener für Klicks auf Tabs
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const tabId = button.getAttribute('aria-controls');
+      activateTab(tabId);
+      // URL ohne Neuladen anpassen auf /tabId/
+      history.pushState(null, '', '/' + tabId + '/');
+    });
+  });
+
+  // Beim Laden der Seite den Tab aus der URL holen
+  window.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (path && document.getElementById('tab-' + path)) {
+      activateTab(path);
+    } else {
+      activateTab('brawlstars'); // Standard-Tab
+    }
+  });
+
+  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
+  });
+</script>
 </body>
 </html>
+
 
 
