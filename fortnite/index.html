@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MLVZBNND22"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MLVZBNND22');
+</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
+     crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <link rel="canonical" href="https://rewardrealms.com/fortnite/" />
-  <meta name="description" content="Earn free in-game currency in games like Fortnite, Brawl Stars, Clash Royale, PUBG Mobile and more – 100% legal and safe methods." />
-
+  <link rel="canonical" href="https://rewardrealms.com/" />
+   <meta name="description" content="Earn free in-game currency in games like Fortnite, Brawl Stars, Clash Royale, PUBG Mobile and more – 100% legal and safe methods." />
   <!-- Open Graph (Facebook, Discord, etc.) -->
-  <meta property="og:title" content="RewardRealms – Free In-Game Currency Guides" />
-  <meta property="og:description" content="Learn how to earn free, legal currency in Fortnite, PUBG, Clash Royale and more. 100% safe and free-to-play friendly." />
-  <meta property="og:image" content="https://rewardrealms.com/banner.jpg" />
-  <meta property="og:url" content="https://rewardrealms.com" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Google Analytics (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MLVZBNND22"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MLVZBNND22');
-  </script>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-          crossorigin="anonymous"></script>
-
+<meta property="og:title" content="RewardRealms – Free In-Game Currency Guides" />
+<meta property="og:description" content="Learn how to earn free, legal currency in Fortnite, PUBG, Clash Royale and more. 100% safe and free-to-play friendly." />
+<meta property="og:image" content="https://rewardrealms.com/banner.jpg" />
+<meta property="og:url" content="https://rewardrealms.com" />
+<meta name="twitter:card" content="summary_large_image" />
 
  <title>Free Gems, Robux & V-Bucks – Official Methods</title>
 <link rel="icon" type="image/png" href="/favicon.png" />
   <style>
   /* Make tabs stack vertically on small screens */
+/* Make tabs stack vertically on small screens */
 @media (max-width: 768px) {
   .tab-buttons {
     display: flex;
@@ -40,12 +36,11 @@
   }
 
   .tab-buttons button {
-  flex: 0 0 auto;
-  white-space: nowrap;
-  font-size: 1rem;
-  padding: 12px;
-}
-
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 1rem;
+    padding: 12px;
+  }
 
   .tab-content {
     padding: 1rem;
@@ -62,39 +57,36 @@
     margin: 1.5rem 0;
   }
 }
+
 .tab-buttons {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  flex-direction: column; /* vertikal anordnen */
   gap: 10px;
   margin-bottom: 1rem;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
+  overflow-x: visible;    /* kein horizontaler Scroll */
+  -webkit-overflow-scrolling: auto; /* optional, kann weg */
+  scrollbar-width: auto;             /* optional, kann weg */
 }
 
+/* scrollbar ausblenden ist jetzt nicht nötig, da kein Scroll */
 .tab-buttons::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
 
-/* Ensure tables don’t overflow on mobile */
-.tab-content table {
-  max-width: 100%;
-  overflow-x: auto;
-  word-wrap: break-word;
-}
-
-    body {
+/* Global Layout */
+body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #222;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   margin: 0;
   padding: 0;
   line-height: 1.6;
   font-size: 20px;
 }
 
-    header {
+/* Header (Hero) */
+header {
   width: 100vw;
   margin: 0 auto;
   padding: 0;
@@ -107,114 +99,304 @@
   color: white;
   text-align: center;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  border-radius: 0;
+}
+
+/* Tab-Leiste */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox*/
+  justify-content: center;  /* <-- diese Zeile einfügen */
 }
 
 
-    .tabs {
-      display: flex;
-      justify-content: center;
-      background-color: #ddd;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 20px;
-      user-select: none;
-    }
-    .tab-button {
-      cursor: pointer;
-      padding: 15px 30px;
-      font-weight: bold;
-      color: #555;
-      border: none;
-      background: none;
-      border-bottom: 3px solid transparent;
-      transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-      flex-grow: 1;
-      text-align: center;
-    }
-    .tab-button:hover {
-      background-color: #ccc;
-      color: #222;
-    }
-    .tab-button.active {
-      border-bottom: 3px solid #ffcc00;
-      background-color: #fff;
-      color: #222;
-    }
-    .content {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      min-height: 400px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      color: #222;
-    }
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    .ad-slot {
-      background-color: #f0f0f0;
-      color: #555;
-      text-align: center;
-      padding: 15px;
-      margin: 15px 0;
-      border: 2px dashed #ccc;
-      border-radius: 10px;
-      font-style: italic;
-      user-select: none;
-    }
-    footer {
-      max-width: 900px;
-      margin: 40px auto 0;
-      text-align: center;
-      font-size: 14px;
-      color: #888;
-      font-style: italic;
-    }
+.tab-buttons::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+/* Soft-Fade an den Seiten der Tab-Leiste */
+.tab-buttons-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-buttons::before,
+.tab-buttons::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.tab-buttons::before {
+  left: 0;
+  background: linear-gradient(to right, #f7f7f7 0%, transparent 100%);
+}
+
+.tab-buttons::after {
+  right: 0;
+  background: linear-gradient(to left, #f7f7f7 0%, transparent 100%);
+}
+
+/* Optional: Tabs umbrechen auf kleinen Bildschirmen */
+@media (max-width: 768px) {
+  .tab-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tab-button {
+    flex: 1 1 45%;
+    margin: 5px 0;
+  }
+}
+
+.tab-button {
+  cursor: pointer;
+  padding: 18px 40px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #555;
+  background: none;
+  border: 2px solid #ccc;  /* dezenter grauer Rahmen */
+  border-radius: 14px;
+  border-bottom: none !important;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s;
+  flex-grow: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tab-button:hover {
+  background-color: #f3f4f6;
+  border-color: #3b82f6;
+  color: #1e40af;
+  transform: scale(1.03);
+}
+
+.tab-button.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  box-shadow: none; /* Entfernt den Schatten */
+  transform: scale(1.05);
+  border-bottom: none !important;
+}
+ 
+/* Content-Karten */
+.content {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  color: var(--color-text);
+}
+
+/* Tabellen & Inhalte */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.tab-content table {
+  max-width: 100%;
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+
+/* Werbe-Slots */
+.ad-slot {
+  background-color: #fefce8;
+  color: #92400e;
+  text-align: center;
+  padding: 15px;
+  margin: 15px 0;
+  border: 2px dashed #fcd34d;
+  border-radius: 10px;
+  font-style: italic;
+  user-select: none;
+}
+
+/* Footer */
+footer {
+  max-width: 900px;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* Optional: Buttons für z. B. "Jetzt starten" */
+.btn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out, transform 0.1s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.tab-button,
+.tab-button.active {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.tabs {
+  box-shadow: none !important;
+}
+ 
   </style>
 </head>
 <body>
 
   <header>
-    <h2>🎮 Earn Free In-Game Currency & Resources for Your Favorite Games – 100% Legal!</h2>
-  </header>
+  <h2>🎮 Earn Free In-Game Currency & Resources for Your Favorite Games – 100% Legal!</h2>
+</header>
 
-    <div class="tab-buttons" role="tablist">
+<div class="tab-buttons-wrapper">
+  <div class="tab-buttons" role="tablist">
+    <!-- Haupt-Games als sichtbare Links -->
+    <a href="/brawlstars/" class="tab-button" role="tab" aria-selected="false" aria-controls="brawlstars" id="tab-brawlstars">Brawl Stars</a>
+    <a href="/roblox/" class="tab-button" role="tab" aria-selected="false" aria-controls="roblox" id="tab-roblox">Roblox</a>
+    <a href="/fortnite/" class="tab-button active" role="tab" aria-selected="true" aria-controls="fortnite" id="tab-fortnite">Fortnite</a>
 
-    <button class="tab-button" role="tab" aria-selected="false" aria-controls="brawlstars" id="tab-brawlstars">Brawl Stars</button>
-<button class="tab-button active" role="tab" aria-selected="true" aria-controls="roblox" id="tab-roblox">Roblox</button>
-<button class="tab-button active" role="tab" aria-selected="true" aria-controls="fortnite" id="tab-fortnite">Fortnite</button>
-
-<!-- ✅ Set this one as active -->
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="cod" id="tab-cod">Call of Duty</button>
-
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="clashroyale" id="tab-clashroyale">Clash Royale</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="genshin" id="tab-genshin">Genshin Impact</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="apex" id="tab-apex">Apex Legends</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="fifa" id="tab-fifa">FIFA / EA FC</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="minecraft" id="tab-minecraft">Minecraft</button>
-<button class="tab-button" role="tab" aria-selected="false" aria-controls="pubg" id="tab-pubg">PUBG Mobile</button>
-
-  
-
-
-
+    <!-- Other Games Toggle Button bleibt Button zum Aufklappen -->
+    <button class="tab-button" id="toggle-other-games" aria-expanded="false" aria-controls="other-games-list">Other Games ▼</button>
   </div>
 
+  <!-- Versteckte Liste mit weiteren Games als Links -->
+  <div id="other-games-list" style="display: none; flex-direction: column; gap: 8px; margin-top: 10px;" role="tabpanel" aria-labelledby="toggle-other-games">
+    <a href="/cod/" class="tab-button" role="tab" aria-selected="false" aria-controls="cod" id="tab-cod">Call of Duty</a>
+    <a href="/clashroyale/" class="tab-button" role="tab" aria-selected="false" aria-controls="clashroyale" id="tab-clashroyale">Clash Royale</a>
+    <a href="/genshin/" class="tab-button" role="tab" aria-selected="false" aria-controls="genshin" id="tab-genshin">Genshin Impact</a>
+    <a href="/apex/" class="tab-button" role="tab" aria-selected="false" aria-controls="apex" id="tab-apex">Apex Legends</a>
+    <a href="/fifa/" class="tab-button" role="tab" aria-selected="false" aria-controls="fifa" id="tab-fifa">FIFA / EA FC</a>
+    <a href="/minecraft/" class="tab-button" role="tab" aria-selected="false" aria-controls="minecraft" id="tab-minecraft">Minecraft</a>
+    <a href="/pubg/" class="tab-button" role="tab" aria-selected="false" aria-controls="pubg" id="tab-pubg">PUBG Mobile</a>
+  </div>
+</div>
+
+
+
+<script>
+  // Funktion zum Aktivieren eines Tabs
+  function activateTab(tabId) {
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+
+    const button = document.getElementById('tab-' + tabId);
+    const content = document.getElementById(tabId);
+
+    if (button && content) {
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+      content.classList.add('active');
+    }
+  }
+
+  // Referenz auf Other Games Button und Liste
+  const otherGamesToggle = document.getElementById('toggle-other-games');
+  const otherGamesList = document.getElementById('other-games-list');
+
+  // Klick-Event für alle Tab-Buttons
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      // Wenn der Button der "Other Games" Toggle ist:
+      if (button === otherGamesToggle) {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        if (isExpanded) {
+          // Liste zuklappen
+          otherGamesList.style.display = 'none';
+          button.setAttribute('aria-expanded', 'false');
+          button.textContent = 'Other Games ▼';
+        } else {
+          // Liste aufklappen
+          otherGamesList.style.display = 'flex';
+          button.setAttribute('aria-expanded', 'true');
+          button.textContent = 'Other Games ▲';
+        }
+        // Keine Tab-Aktivierung oder Content-Wechsel!
+        return;
+      }
+
+      // Sonst normalen Tab wechseln
+      const tabId = button.getAttribute('aria-controls');
+      activateTab(tabId);
+
+      // Other Games Liste zuklappen, wenn offen
+      otherGamesList.style.display = 'none';
+      otherGamesToggle.setAttribute('aria-expanded', 'false');
+      otherGamesToggle.textContent = 'Other Games ▼';
+
+      // URL anpassen (optional)
+      history.pushState(null, '', '/' + tabId + '/');
+    });
+  });
+
+  // Beim Laden der Seite den Tab aus der URL holen
+  window.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (path && document.getElementById('tab-' + path)) {
+      activateTab(path);
+    } else {
+      activateTab('brawlstars'); // Standard-Tab
+    }
+  });
+
+  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
+  });
+</script>
+
   <div class="content">
-    <section id="fortnite" role="tabpanel" aria-labelledby="tab-fortnite" class="tab-content active">
-  <h2>🔫 How to Get Free V-Bucks in Fortnite</h2>
-  <!-- Inhalt Fortnite -->
-</section>
+    <!-- Fortnite Content -->
+    <section id="fortnite" role="tabpanel" aria-labelledby="tab-fortnite" class="tab-content">
+      <h2>🔫 How to Get Free V-Bucks in Fortnite</h2>
 
+      <p>💸 If you read all the tips in this guide carefully, you’ll 100% be able to earn free V-Bucks consistently — and maybe even make real money along the way. Don’t skip the final sections — they contain advanced strategies most players overlook!
 
+Fortnite is one of the most popular battle royale games in the world, and V-Bucks are its core currency. From stylish skins to the Battle Pass, emotes, wraps, pickaxes, and more — you need V-Bucks to personalize your experience. While many players simply buy them with real money, smart players earn them for free through legit methods — both in-game and outside of it.
 
-      <p>V-Bucks are Fortnite's in-game currency used to purchase skins, emotes, Battle Passes, and other cosmetics. Epic Games primarily sells V-Bucks for real money, but there are some legitimate ways to earn free V-Bucks by playing the game or participating in official promotions.</p>
+Here’s your step-by-step guide to earning free V-Bucks in 2025, without risking your account, falling for scams, or wasting time on fake generators.
+</p>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
 <!-- Werbung 21 -->
@@ -227,20 +409,73 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 22 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="5503654210"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+      
 
-      <p>One of the easiest methods is through the Fortnite Battle Pass. Although it requires initial purchase, the Battle Pass allows you to earn back a significant amount of V-Bucks by completing challenges and leveling up. Many players buy the Battle Pass early in the season and recoup their investment plus extra V-Bucks by playing consistently.</p>
+      <p>✅ 1. Max Out the Battle Pass (And Profit Every Season)</p>
+
+        
+<p>Let’s start with the most well-known method — but used strategically.</p>
+
+<p>The Battle Pass costs 950 V-Bucks but gives you up to 1,500 V-Bucks back when fully completed. That’s a net profit every season if you reinvest smartly.</p>
+
+<p>How to Maximize It:</p>
+
+<p>Complete daily, weekly, and milestone quests</p>
+
+<p>Focus on XP-boosting game modes (Team Rumble, Save the World)</p>
+
+<p>Play with friends for party XP boosts</p>
+
+<p>🎯 Pro Tip: If you save V-Bucks each season, you never need to buy the Battle Pass again.</p>
+
+<p>✅ 2. Save the World = The Best Passive V-Bucks Source</p>
+
+<p>If you own Save the World (PvE mode), you’re sitting on a V-Bucks goldmine.</p>
+
+<p>This co-op campaign rewards daily and weekly quests with 50–100+ V-Bucks. Login bonuses, mission alerts, and defense missions also give out V-Bucks steadily.</p>
+
+<p>How to Earn:</p>
+
+<p>Complete daily missions (rotating objectives)</p>
+
+<p>Defend your Storm Shield base</p>
+
+<p>Finish mini-boss mission alerts</p>
+
+<p>Log in daily for bonus rewards</p>
+
+<p>🔁 With just 10–15 minutes daily, many players earn 1,000+ V-Bucks/month passively.</p>
+
+<p>Note: Save the World isn’t free — it’s a one-time purchase (usually ~$15–20 on sale).</p>
+
+<p>✅ 3. Microsoft Rewards – Free V-Bucks for Doing… Nothing Special</p>
+
+<p>This method is crazy underrated.</p>
+
+<p>What it is:</p>
+
+<p>Microsoft Rewards gives you points for using Bing search, doing daily quizzes, or playing Game Pass quests.</p>
+
+<p>How to Use It:</p>
+
+<p>Sign up with your Microsoft account</p>
+
+<p>Earn points by:</p>
+
+<p>🔍 Searching via Bing (desktop + mobile)</p>
+
+<p>🧠 Doing quizzes & trivia</p>
+
+<p>🎮 Playing Xbox Game Pass quests</p>
+
+<p>Redeem points for Xbox Gift Cards</p>
+
+<p>Use the gift cards to buy V-Bucks in Fortnite on console or PC</p>
+
+<p>💸 Estimated Return: 1,000–2,500 V-Bucks/month with 5–10 minutes daily</p>
+
+<p>🎯 This is 100% free, requires no payment, and works globally in most regions.</p>
+
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
 <!-- Werbung 23 -->
@@ -253,20 +488,115 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 24 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="4564594174"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+     
 
-      <p>Save the World mode, Fortnite's PvE campaign, also rewards players with V-Bucks by completing daily quests and challenges. Even though Save the World is a paid mode, players who already own it can earn V-Bucks without spending additional money. Completing these quests regularly can add up to a nice stash of V-Bucks over time.</p>
+      <p>✅ 4. Google Opinion Rewards – Answer Surveys, Earn V-Bucks</p>
+
+        
+<p>Another fan-favorite: Google’s own reward app.</p>
+
+<p>How It Works:</p>
+
+<p>Download Google Opinion Rewards (Android)</p>
+
+<p>Get notified when short surveys appear</p>
+
+<p>Answer honestly (takes ~30 sec)</p>
+
+<p>Get Google Play balance</p>
+
+<p>Buy V-Bucks using your credit balance in the Fortnite shop</p>
+
+<p>Surveys are often location-based, so enable location + notifications.</p>
+
+<p>🔁 Average users earn $3–5/month — enough for a few hundred V-Bucks regularly.</p>
+
+<p>✅ 5. Watch for Special Fortnite Events & Free Reward Programs</p>
+
+<p>Epic regularly hosts limited-time events and promotions that reward players with cosmetics, XP, or even free V-Bucks.</p>
+
+<p>Examples:</p>
+
+<p>🎄 Winterfest: Free daily presents and cosmetics</p>
+
+<p>🎉 Anniversary events</p>
+
+<p>🔥 Refer-a-Friend programs: Earn free skins + V-Bucks by inviting friends back to Fortnite</p>
+
+<p>🕹️ PlayStation Plus / Prime Gaming packs (sometimes include V-Bucks)</p>
+
+<p>🎯 Keep an eye on:</p>
+
+<p>The in-game News tab</p>
+
+<p>Fortnite’s official Twitter</p>
+
+<p>Epic’s news page</p>
+
+<p>✅ 6. Join V-Bucks Giveaways (From Verified Creators)</p>
+
+<p>Many trusted Fortnite YouTubers, TikTokers, and streamers host V-Buck giveaways on a regular basis.</p>
+
+<p>Where to Find Them:</p>
+
+<p>YouTube (e.g. SypherPK, Top5Gaming, Ali-A)</p>
+
+<p>TikTok (Fortnite meme pages, challenge creators)</p>
+
+<p>Discord (custom servers with weekly raffles)</p>
+
+<p>Twitter (retweet/comment giveaways)</p>
+
+<p>Typical Entry Requirements:</p>
+
+<p>Like + Comment a video</p>
+
+<p>Follow + Tag friends on Twitter</p>
+
+<p>Join a Discord server</p>
+
+<p>⚠️ Important: Only enter verified creator giveaways. If it looks shady or asks for your password — run.</p>
+
+<p>✅ 7. Earn Real Money with Fortnite Content (And Buy Unlimited V-Bucks)</p>
+
+<p>Here’s the ultimate upgrade path: Use Fortnite itself to earn real money — then convert it into endless V-Bucks.</p>
+
+<p>🎥 Create a Fortnite YouTube Channel</p>
+
+<p>Content Ideas: Funny moments, clutch clips, combos, reaction vids</p>
+
+<p>Monetize via:</p>
+
+<p>YouTube Ads</p>
+
+<p>Affiliate links (gaming gear, VPNs, energy drinks)</p>
+
+<p>Sponsors</p>
+
+<p>Donations (Ko-fi, Patreon)</p>
+
+<p>Once you hit 1,000 subs and 4,000 hours watch time, YouTube pays you monthly.</p>
+
+<p>📱 Go Viral on TikTok</p>
+
+<p>Post short, stylish clips (clutches, edits, memes)</p>
+
+<p>Use trending sounds & Fortnite hashtags</p>
+
+<p>Link your Discord or YouTube for funnel growth</p>
+
+<p>Creator Fund + brand deals = passive income</p>
+
+<p>💬 Build a Fortnite Discord Server</p>
+
+<p>Host tournaments, give tips, or create a meme hub</p>
+
+<p>Add donation roles or partner with small brands</p>
+
+<p>Sell VIP access, shoutouts, or emote packs</p>
+
+<p>Many players go from 0 to $50–$500+/month this way — enough to buy every Battle Pass, bundle, or skin you want.</p>
+
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
 <!-- Werbung 25 -->
@@ -279,20 +609,112 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 26 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="8312267491"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+     
+      <p>✅ 8. Stack & Combine Methods Like a Pro</p>
 
-      <p>Epic Games sometimes offers free V-Bucks as part of special events, promotions, or collaborations. These opportunities are rare but can be quite generous. Always keep an eye on official Fortnite social media channels and Epic's announcements to stay updated on such events.</p>
+        
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>💼 Time</th>
+      <th>💡 Method</th>
+      <th>💰 Est. V-Bucks / Month</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Microsoft Rewards + Google Surveys</td>
+      <td>1,500–3,000</td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td>Save the World + Battle Pass Loop</td>
+      <td>2,000–5,000</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>YouTube/TikTok/Discord Monetization</td>
+      <td>5,000–50,000+ (real money)</td>
+    </tr>
+    <tr>
+      <td>Passive</td>
+      <td>Free Events + Login Rewards</td>
+      <td>500–1,000</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>
+The Smart Loop:</p>
+
+<p>
+Use free methods to buy Battle Pass</p>
+
+
+<p>
+Grind the pass → earn more V-Bucks</p>
+
+
+<p>
+Reinvest or stack for skins or Save the World</p>
+
+
+<p>
+Optional: Start content creation → monetize your gameplay</p>
+
+
+<p>
+This is how top players never spend a cent, yet stay fully stacked.</p>
+
+
+<p>
+🔒 Final Words: Build Your V-Bucks Empire</p>
+
+<p>
+Congrats — you now know every legit method to get free V-Bucks in Fortnite in 2025.</p>
+
+
+<p>
+Whether you’re:</p>
+
+
+<p>
+Grinding quests in Save the World</p>
+
+
+<p>
+Earning gift cards through surveys</p>
+
+
+<p>
+Creating content to earn real money</p>
+
+
+<p>
+...you’re no longer just another player — you’re a V-Bucks strategist.</p>
+
+
+<p>
+💡 Tips to Remember:</p>
+
+
+<p>
+Don’t fall for scam websites or “generators”</p>
+
+
+<p>
+Be patient — even $2/month adds up</p>
+
+
+<p>
+Reinvest your gains (Battle Pass pays for itself!)</p>
+
+
+<p>
+🔖 Bookmark this guide and come back for updates — new collabs, events, and apps drop all the time.
+</p>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
      crossorigin="anonymous"></script>
 <!-- Werbung 27 -->
@@ -305,55 +727,14 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 28 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="7553719595"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-      <p>Participating in Fortnite tournaments or community events can also be a way to win V-Bucks. Epic hosts competitive events where skilled players can earn prizes, including V-Bucks. Additionally, some creators and streamers host giveaways that include V-Bucks or Fortnite gift cards. Always verify the legitimacy of these giveaways before participating.</p>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 29 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="6441347278"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7531671988064008"
-     crossorigin="anonymous"></script>
-<!-- Werbung 30 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7531671988064008"
-     data-ad-slot="5946523253"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-      <p>Beware of scams promising free V-Bucks through unofficial websites or apps. Epic Games does not endorse any third-party services that offer free V-Bucks. Using such services risks account bans and personal data theft. Stick to the legitimate methods listed here to keep your Fortnite account safe.</p>
-
-      <p>With patience and by actively engaging with the game and community events, you can collect a respectable number of V-Bucks legally, avoiding scams and protecting your account.</p>
+     
       <p style="font-size: 14px; color: #888; margin-top: 30px;"><em>🕒 Last updated: June 2025</em></p>
 
     </section>
-    </div>
+     </div>
 
-  <footer>
-    © 2025 Legit Game Currency Guide. All rights reserved.
+<footer>
+    © 2025 RewardRealms.com. All rights reserved.
   </footer>
 
   <script>
@@ -389,50 +770,13 @@
 </html>
   </div> <!-- Ende .content -->
 
-  <!-- Privacy Policy -->
-  <section id="privacy-policy" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.5;">
-    <h2>Privacy Policy</h2>
-    <p>We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with legal data protection regulations.</p>
-    <p>This website does not use any tracking tools or external analytics services. No personal data is stored or processed except for data you voluntarily provide (e.g., through contact forms).</p>
-    <p>Advertisements are served via Google AdSense, which may set cookies. For more details, please see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
-    <p>If you have any questions about data protection, you can contact us at any time.</p>
-  </section>
-
-  <section id="terms" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-  <h2>Terms of Use</h2>
-  <p>By using RewardRealms.com, you agree not to misuse the content or attempt to manipulate or game systems discussed on this website. All guides are for informational purposes only. We do not promote hacks, cheats, or illegal tools.</p>
-  <p>We are not affiliated with the game publishers mentioned. Game names and logos are trademarks of their respective owners.</p>
-</section>
-
-
   <!-- About Section -->
 <section id="about" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
   <h2>About RewardRealms</h2>
-  <p>RewardRealms is your go-to source for free and legal ways to earn in-game currency across popular titles like Fortnite, PUBG Mobile, Clash Royale, and more. We research and share the most reliable free-to-play strategies so you can game smarter — without spending money.</p>
-</section>
-<!-- Privacy Policy Section -->
-<section id="privacy-policy" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.6;">
-  <h2>Privacy Policy</h2>
-  <p>We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with legal data protection regulations.</p>
-  <p>This website does not use tracking tools or analytics services beyond basic ad personalization via Google AdSense. We do not store or process personal data except for information you voluntarily provide.</p>
-  <p>Advertisements are served via Google AdSense, which may set cookies. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> for details.</p>
+  <p>RewardRealms is your ultimate destination for discovering free and completely legal methods to earn in-game currency in popular games like Fortnite, PUBG Mobile, Clash Royale, and many more. As a longtime gamer, I have spent years searching for the best ways to earn in-game currencies without spending real money. Drawing from my personal experience and research, I share the most reliable and effective free-to-play strategies to help you level up and enjoy your favorite games without breaking the bank. I’m also a Brawl Stars YouTuber with over 600,000 subscribers, bringing my passion and knowledge to a large gaming community. With RewardRealms, I want to provide players with a clear overview of all legal and working methods out there — so you can avoid scams and focus on what really works. Join RewardRealms and unlock the secrets to maximizing your gaming experience for free!</p>
 </section>
 
-<!-- About Section -->
-<section id="about" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.6;">
-  <h2>About</h2>
-  <p><strong>RewardRealms.com</strong> is a free resource hub for gamers looking to earn in-game currencies like Robux, V-Bucks, CP, and more — all through legal and proven methods.</p>
-  <p>We provide detailed guides for popular games including Fortnite, Clash Royale, COD Mobile, and others, with a focus on free-to-play earning strategies.</p>
-  <p>The site is monetized through Google AdSense, similar to YouTube. This helps us keep all content free while maintaining transparency and quality.</p>
-</section>
-
-<!-- Terms of Use Section -->
-<section id="terms" style="max-width: 900px; margin: 40px auto 60px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.6;">
-  <h2>Terms of Use</h2>
-  <p>By accessing RewardRealms.com, you agree to use the information provided responsibly and for lawful purposes only. All guides and recommendations are for informational purposes and do not guarantee outcomes or rewards from third-party services or games.</p>
-  <p>You may not copy or reproduce content from this site without permission. We reserve the right to update or remove content at any time without notice.</p>
-  <p>Continued use of this site implies acceptance of these terms.</p>
-</section>
+   
 
 <section id="faq" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
   <h2>Frequently Asked Questions</h2>
@@ -452,6 +796,26 @@
   <h3>Can I request a guide for a specific game?</h3>
   <p>Absolutely! Just contact us through the About section or leave a comment where available — we love suggestions from the community.</p>
 </section>
+
+   <section id="terms" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <h2>Terms of Use</h2>
+  <p>By using RewardRealms.com, you agree not to misuse the content or attempt to manipulate or game systems discussed on this website. All guides are for informational purposes only. We do not promote hacks, cheats, or illegal tools.</p>
+  <p>We are not affiliated with the game publishers mentioned. Game names and logos are trademarks of their respective owners.</p>
+</section>
+
+
+  
+
+  <!-- Privacy Policy -->
+  <section id="privacy-policy" style="max-width: 900px; margin: 40px auto 20px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #222; font-size: 16px; line-height: 1.5;">
+    <h2>Privacy Policy</h2>
+    <p>We take the protection of your personal data very seriously. Your data is treated confidentially and in accordance with legal data protection regulations.</p>
+    <p>This website does not use any tracking tools or external analytics services. No personal data is stored or processed except for data you voluntarily provide (e.g., through contact forms).</p>
+    <p>Advertisements are served via Google AdSense, which may set cookies. For more details, please see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+    <p>If you have any questions about data protection, you can contact us at any time.</p>
+  </section>
+
+ 
 <section id="contact" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-size: 16px; line-height: 1.6;">
   <h2>Contact</h2>
   <p>Got questions, suggestions, or partnership inquiries?</p>
@@ -459,16 +823,88 @@
   <p>We typically respond within 24–48 hours.</p>
 </section>
 
-
-<footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
+<footer>
+ <footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
   © 2025 RewardRealms.com. All rights reserved. |
   <a href="#privacy-policy">Privacy Policy</a> |
   <a href="#about">About</a> |
   <a href="#terms">Terms of Use</a> |
   <a href="#contact">Contact</a>
 </footer>
+</footer>
 
-<script src="../js/tabs.js"></script>
+<script>
+  // Toggle Other Games Liste
+  const toggleBtn = document.getElementById('toggle-other-games');
+  const otherGamesList = document.getElementById('other-games-list');
+
+  toggleBtn.addEventListener('click', () => {
+    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+
+    if (isExpanded) {
+      otherGamesList.style.display = 'none';
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.textContent = 'Other Games ▼';
+    } else {
+      otherGamesList.style.display = 'flex';
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      toggleBtn.textContent = 'Other Games ▲';
+    }
+  });
+</script>
+
+
+
+
+
+   <script>
+  // Funktion zum Aktivieren eines Tabs
+  function activateTab(tabId) {
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+
+    const button = document.getElementById('tab-' + tabId);
+    const content = document.getElementById(tabId);
+
+    if (button && content) {
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+      content.classList.add('active');
+    }
+  }
+
+  // Event-Listener für Klicks auf Tabs
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const tabId = button.getAttribute('aria-controls');
+      activateTab(tabId);
+      // URL ohne Neuladen anpassen auf /tabId/
+      history.pushState(null, '', '/' + tabId + '/');
+    });
+  });
+
+  // Beim Laden der Seite den Tab aus der URL holen
+  window.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (path && document.getElementById('tab-' + path)) {
+      activateTab(path);
+    } else {
+      activateTab('brawlstars'); // Standard-Tab
+    }
+  });
+
+  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
+  });
+</script>
 </body>
 </html>
 
