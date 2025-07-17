@@ -30,30 +30,29 @@
   /* Make tabs stack vertically on small screens */
 /* Make tabs stack vertically on small screens */
 @media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
   .tab-buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  @media (max-width: 768px) {
-  .content {
-    font-size: 22px !important; /* größerer Text im Content */
-    line-height: 1.5;
-  }
-}
-
-
   .tab-buttons button {
-    flex: 0 0 auto;
-    white-space: nowrap;
-    font-size: 1rem;
-    padding: 12px;
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+
+  .content {
+    font-size: 22px !important;
+    line-height: 1.5;
   }
 
   .tab-content {
+    font-size: 18px;
     padding: 1rem;
-    font-size: 0.95rem;
   }
 
   .tab-content table {
@@ -66,6 +65,7 @@
     margin: 1.5rem 0;
   }
 }
+
 
 .tab-buttons {
   display: flex;
