@@ -28,23 +28,40 @@
   <style>
   /* Make tabs stack vertically on small screens */
 /* Make tabs stack vertically on small screens */
+.tab-buttons {
+  display: flex;
+  flex-direction: row; /* horizontal auf Desktop */
+  gap: 10px;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: auto;
+  scrollbar-width: none; /* scrollbar ausblenden */
+}
+
 @media (max-width: 768px) {
   .tab-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* vertikal auf Mobile */
+    overflow-x: visible;
+  }
+
+  /* Rest wie bei dir */
+  body {
+    font-size: 18px;
   }
 
   .tab-buttons button {
-    flex: 0 0 auto;
-    white-space: nowrap;
-    font-size: 1rem;
-    padding: 12px;
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+
+  .content {
+    font-size: 22px !important;
+    line-height: 1.5;
   }
 
   .tab-content {
+    font-size: 18px;
     padding: 1rem;
-    font-size: 0.95rem;
   }
 
   .tab-content table {
@@ -57,6 +74,7 @@
     margin: 1.5rem 0;
   }
 }
+
 
 .tab-buttons {
   display: flex;
