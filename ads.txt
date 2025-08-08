@@ -11,7 +11,7 @@ ezoic.ai, e27d8231b5259c4660aa1ea309e803b8, DIRECT
 themediagrid.com, 4M5PGT, DIRECT, 35d5010d7789b49d
 themediagrid.com, Q19AKF, DIRECT, 35d5010d7789b49d
 sonobi.com, 192ecdea01, RESELLER, d1a215d9eb5aee9e
-google.com, pub-6644558441501035, DIRECT, f08c47fec0942fa0
+google.com, pub-6644558441501035, RESELLER, f08c47fec0942fa0
 google.com, pub-1175987143200523, RESELLER, f08c47fec0942fa0
 # 36
 sharethrough.com, PmzCMtAd, DIRECT, d53b998a7bd4ecd2
