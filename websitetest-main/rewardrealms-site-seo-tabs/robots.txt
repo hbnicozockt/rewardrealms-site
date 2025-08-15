@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /other-games-list/
-
-Allow: /
-
-Sitemap: https://rewardrealms.com/sitemap.xml
