@@ -468,18 +468,22 @@ footer {
   <input type="hidden" name="form-name" value="contact">
 
   <h2>Contact Us</h2>
+  
   <p>
-    <label>Name</label>
-    <input type="text" name="name" required />
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required />
   </p>
+  
   <p>
-    <label>Email</label>
-    <input type="email" name="email" required />
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
   </p>
+  
   <p>
-    <label>Message</label>
-    <textarea name="message" rows="5" required></textarea>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
   </p>
+  
   <p>
     <button type="submit">Submit</button>
   </p>
@@ -491,25 +495,25 @@ footer {
 <style>
 .contact-form {
   background: #fff;
-  padding: 40px 30px;      /* Optional: anpassen, falls Standard-Content anderes Padding hat */
+  padding: 30px 20px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  max-width: 870px;        /* wie der Standard-Content */
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
   font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
-
 
 .contact-form h2 {
   text-align: center;
   margin-bottom: 25px;
   color: #333;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .contact-form p {
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .contact-form label {
@@ -528,6 +532,7 @@ footer {
   border-radius: 8px;
   font-size: 15px;
   transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
 }
 
 .contact-form input[type="text"]:focus,
@@ -545,7 +550,7 @@ footer {
   border: none;
   border-radius: 8px;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
@@ -564,15 +569,28 @@ footer {
   color: red;
 }
 
-/* Optional: Responsive */
+/* Responsive Anpassungen */
 @media (max-width: 480px) {
   .contact-form {
-    padding: 30px 20px;
+    padding: 20px 15px;
+  }
+  .contact-form h2 {
+    font-size: 22px;
+  }
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .contact-form button {
+    font-size: 16px;
+    padding: 12px;
   }
 }
 </style>
 
-<!-- JavaScript für Dankeschön/Error Nachricht -->
+<!-- JavaScript für Erfolg-/Fehlermeldung -->
 <script>
 const form = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
@@ -594,11 +612,12 @@ form.addEventListener('submit', function(e) {
   })
   .catch(() => {
     formMessage.style.display = 'block';
-    formMessage.textContent = 'Something went wrong when sending your message. Please try again';
+    formMessage.textContent = 'Oops! Something went wrong. Please try again.';
     formMessage.className = 'error';
   });
 });
 </script>
+
 
 
 
