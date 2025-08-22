@@ -212,6 +212,222 @@
   </div>
 
   <!-- 👇 Weitere Inhalte wie Spiel-Links folgen hier -->
+  <style>
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+.container {
+    width:100%;
+    max-width:900px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    overflow:hidden;
+    margin: 40px auto;
+}
+
+.search-header {
+    background:#4a6fc7;
+    color:white;
+    padding:25px;
+    text-align:center;
+    border-radius: 12px 12px 0 0;
+}
+
+h1 { font-size:2.2rem; margin-bottom:10px;}
+
+.search-container { padding:25px; background:#f5f7fc; border-bottom:1px solid #e0e6ef;}
+.search-box {
+    display:flex;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    border-radius:8px;
+    overflow:hidden;
+}
+#search-input { flex:1; padding:16px 20px; border:none; font-size:1.1rem; outline:none;}
+.results-container {
+    padding:20px;
+    max-height:500px;
+    overflow-y:auto;
+}
+.result-item {
+    padding:18px;
+    margin-bottom:15px;
+    background:#f8fafd;
+    border-radius:8px;
+    border-left:4px solid #4a6fc7;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor:pointer;
+}
+.result-item:hover {
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    background:#fff;
+}
+.result-title { font-size:1.2rem; font-weight:600; color:#2c3e50; margin-bottom:8px;}
+.result-url { color:#4a6fc7; font-size:0.9rem; margin-bottom:10px; display:block;}
+.result-snippet { color:#666; font-size:0.95rem; line-height:1.5;}
+.no-results { text-align:center; padding:30px; color:#777;}
+@media(max-width:600px){.search-box{flex-direction:column;}}
+</style>
+
+<div class="container">
+    <header class="search-header">
+        <h1>Search through RewardRealms</h1>
+    </header>
+
+    <div class="search-container">
+    <div class="search-box">
+        <input type="text" id="search-input" placeholder="Enter keywords to search...">
+        <button id="search-btn" class="search-btn">
+            🔍
+        </button>
+    </div>
+</div>
+
+<style>
+.search-box {
+    display: flex;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+#search-input {
+    flex: 1;
+    padding: 16px 20px;
+    border: none;
+    font-size: 1.1rem;
+    outline: none;
+}
+.search-btn {
+    background: #4a6fc7;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.search-btn:hover {
+    background: #3b5bb5;
+}
+</style>
+
+<script>
+const searchInput = document.getElementById('search-input');
+const searchBtn = document.getElementById('search-btn');
+
+searchBtn.addEventListener('click', () => {
+    searchInput.dispatchEvent(new KeyboardEvent('keyup', {'key':'Enter'}));
+});
+</script>
+
+
+    <div class="results-container" id="results-container">
+        <div class="no-results"><p>Enter a search term to find relevant pages</p></div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+    const searchInput = document.getElementById('search-input');
+    const resultsContainer = document.getElementById('results-container');
+            
+            // Sample data - replace with your actual website pages
+            const websitePages = [
+        { title: "Brawl Stars Guides", url: "/brawlstars/", content: "Choose beetween two guides for the Game Brawl Stars, one redirecting to a guide on how to Get Free Gems in Brawl Stars and the other one redirecting to a guide for Beginner Tips for Brawl Stars." },
+        { title: "Roblox Guides", url: "/roblox/", content: "Choose beetween two guides for the Game Roblox, one redirecting to a guide on how to Get Free Robux in Roblox and the other one redirecting to a guide for Beginner Tips for Roblox." },
+        { title: "Fortnite Guides", url: "/fortnite/", content: "Choose beetween two guides for the Game Fortnite, one redirecting to a guide on how to Get Free V-Bucks in Fortnite and the other one redirecting to a guide for Beginner Tips for Fortnite." },
+        { title: "Call of Duty Guides", url: "/cod/", content: "Choose beetween two guides for the Game Call of Duty, one redirecting to a guide on how to Get Free Call of Duty Points and the other one redirecting to a guide for Beginner Tips for Call of Duty." },
+        { title: "Clash Royale Guides", url: "/clashroyale/", content: "Choose beetween two guides for the Game Clash Royale, one redirecting to a Guide on how to get Free Gold and Gems in Clash Royale and the other one redirecting to a Guide on Beginner Tips for Clash Royale." },
+        { title: "Genshin Impact Guides", url: "/genshin/", content: "Choose beetween two guides for the Game Genshin Impact, one redirecting to a guide on how to Get Free Primogems and Mora and the other one redirecting to a guide for Beginner Tips for Genshin Impact." },
+        { title: "Apex Legends Guides", url: "/apex/", content: "Choose beetween two guides for the Game Apex Legends, one redirecting to a guide on how to Get Free Legend Tokens & Crafting Metals in Apex Legends and the other one redirecting to a guide for Beginner Tips for Apex Legends." },
+        { title: "FIFA Guides", url: "/fifa/", content: "Choose beetween two guides for the Game FIFA, one redirecting to a guide on how to Get Free FIFA Points in FIFA and the other one redirecting to a guide for Beginner Tips for FIFA." },
+        { title: "Minecraft Guides", url: "/minecraft/", content: "Choose beetween two guides for the Game Minecraft, one redirecting to a guide on how to Get Free Minecraft Currency in Minecraft and the other one redirecting to a guide for Beginner Tips for Minecraft." },
+        { title: "PUBG Guides", url: "/pubg/", content: "Choose beetween two guides for the Game Pubg, one redirecting to a guide on how to Get Free UC (Unknown Cash) and Battle Points and the other one redirecting to a guide for Beginner Tips for Pubg." },
+        { title: "Fast Ways to earn in-game currencies", url: "/fast-ways/", content: "Discover fast and legal ways to earn free in-game currencies like Gems, Coins, and Points in games such as Fortnite, Brawl Stars, Clash Royale, PUBG Mobile and more." },
+        { title: "Privacy Policy", url: "/privacy-policy", content: "Read RewardRealms' Privacy Policy to learn how we collect, use, and protect your information while providing guides for Games, Rewards & Safe Play." },
+        { title: "About Us", url: "/about", content: "Learn more about RewardRealms, your trusted guide for Games, Rewards & Safe Play Guides. Discover our mission, team, and vision." },
+        { title: "Terms of Use", url: "/terms-of-use", content: "Read RewardRealms' Terms of Use to understand the rules and guidelines for using our website and accessing Games, Rewards & Safe Play Guides." },
+        { title: "Contact", url: "/contact", content: "Contact RewardRealms to get in touch with our team for questions, partnerships, or support regarding Games, Rewards & Safe Play Guides." },
+        { title: "How to Spot Fake Offers", url: "/how-to-spot-fake-offers", content: "Learn how to spot fake in-game currency offers in games like Fortnite, Brawl Stars, Clash Royale, PUBG Mobile, and more. Stay safe and avoid scams with our tips." },
+        { title: "Beginners Guide for Game Currencies", url: "/beginners-guide-in-game-currencies", content: "Beginners guide to earning free in-game currencies in games like Fortnite, Brawl Stars, Clash Royale, PUBG Mobile and more. 100% legal, safe, and free-to-play friendly methods." },
+        { title: "Best Apps to Earn Gift Cards 2025", url: "/best-apps-to-earn-gift-cards-2025", content: "Discover the best apps in 2025 to earn free gift cards safely and legally. Step-by-step guides, tips, and methods for beginners and free-to-play users." },
+        { title: "Gaming Gear & Accessories", url: "/gaming-gear-accessoires", content: "Discover the best gaming gear and accessories to level up your gameplay. Reviews, tips, and recommendations for keyboards, mice, headsets, controllers, and more." },
+        { title: "Improve Gaming Skills for free", url: "/improve-gaming-skills-free", content: "Learn how to improve your gaming skills for free in games like Fortnite, Brawl Stars, Clash Royale, PUBG Mobile, and more. Tips, tricks, and strategies without spending any money." },
+       { title: "Redeem Google Play & Apple Gift Cards safely", url: "/redeem-google-play-apple-gift-cards", content: "Learn how to safely redeem Google Play and Apple Gift Cards to get free in-game currency and rewards. Step-by-step guides for iOS and Android users." }
+    { title: "Free Brawl Stars Gems & Coins", url: "/free-gems-brawl-stars", content: "Learn how to earn free Brawl Stars Gems and Coins safely and legally. Step-by-step guides, tips, and methods for beginners and free-to-play players." },
+    { title: "10 Brawl Stars Tips for Beginners", url: "/brawl-stars-tips-beginners", content: "Discover 10 essential tips for beginners in Brawl Stars. Learn strategies, character choices, and gameplay techniques to level up faster and win more battles!" },
+    { title: "10 Apex Tips for Beginners", url: "/apex-tips-beginners", content: "Discover 10 essential tips for beginners in Apex Legends. Learn strategies, Legend choices, and gameplay techniques to improve skills and survive longer!" },
+    { title: "Free Legend Tokens Apex", url: "/free-legend-tokens-apex", content: "Learn how to earn free Apex Legends Coins safely and legally. Step-by-step guides, tips, and methods that are 100% safe and free-to-play friendly." },
+    { title: "Free Gold & Gems Clash Royale", url: "/free-gold-gems-clashroyale", content: "Learn how to earn free Clash Royale Gems and Gold safely and legally. Step-by-step guides, tips, and methods for beginners and free-to-play players." },
+    { title: "10 Clash Royale Tips for Beginners", url: "/clash-royale-tips-beginners", content: "Discover 10 essential tips for beginners in Clash Royale. Learn strategies, deck building, and gameplay techniques to win more battles and climb arenas faster!" },
+    { title: "Partnership with RewardRealms", url: "/partnership", content: "Join the RewardRealms Creator Partnership! Promote in-game rewards to your audience and earn a share of ad revenue. Safe, policy-compliant, and easy to get started." },
+    { title: "Free Robux & In-Game Rewards Roblox", url: "/free-robux-roblox", content: "Learn how to earn free in-game currency in Roblox safely and legally. Step-by-step guides and tips for Robux and other rewards." },
+    { title: "10 Roblox Tips for Beginners", url: "/roblox-tips-beginners", content: "Discover 10 essential tips for beginners in Roblox. Learn strategies, character choices, and gameplay techniques to level up faster and win more battles!" },
+    { title: "Free V-Bucks Fortnite", url: "/free-vbucks-fortnite", content: "Learn how to earn free V-Bucks and in-game currency in Fortnite safely and legally. Step-by-step guides, tips, and methods for beginners and free-to-play players." },
+    { title: "15 Fortnite Tips for Beginners", url: "/fortnite-tips-beginners", content: "Discover 15 essential tips for beginners in Fortnite. Learn strategies, character choices, and gameplay techniques to level up faster and win more battles!" },
+    { title: "Free Call of Duty Points COD", url: "/free-callofdutypoints-cod", content: "Learn how to earn free Call of Duty Points and in-game currency safely and legally. Step-by-step guides, tips, and methods for beginners and free-to-play players." },
+    { title: "15 COD Tips for Beginners", url: "/cod-tips-beginners", content: "Discover 15 essential tips for beginners in Call of Duty. Learn strategies, character choices, and gameplay techniques to level up faster and win more battles!" },
+    { title: "Free Minecraft currency", url: "/free-currency-minecraft", content: "Learn how to earn free in-game currency and rewards in Minecraft safely and legally. Tips, tricks, and guides to enhance your Minecraft experience without spending money." },
+    { title: "15 Minecraft Tips for Beginners", url: "/minecraft-tips-beginners", content: "Discover 15 essential tips for beginners in Minecraft. Learn strategies, server choices, and gameplay techniques to level up faster and survive longer!" },
+    { title: "Free FIFA Points", url: "/free-fifa-points-fifa", content: "Learn how to earn free FIFA Coins and in-game currency safely and legally. Step-by-step guides, tips, and methods for beginners and free-to-play players." },
+    { title: "15 FIFA Tips for Beginners", url: "/fifa-tips-beginners", content: "Discover 15 essential tips for beginners in FIFA. Learn strategies, player choices, and gameplay techniques to level up faster and win more matches!" },
+    { title: "Free Unknown Cash PUBG", url: "/free-unknown-cash-pubg", content: "Learn how to earn free in-game currency and rewards in PUBG Mobile safely and legally. Tips, tricks, and guides to level up without spending money." },
+    { title: "15 PUBG Tips for Beginners", url: "/pubg-tips-beginners", content: "Discover 15 essential tips for beginners in PUBG. Learn strategies and gameplay techniques to level up faster and win more matches!" },
+    { title: "Free Primogems and Mora Genshin", url: "/free-primogems-and-mora-genshin", content: "Learn how to earn free Primogems and Mora in Genshin Impact safely and legally. Step-by-step guides, tips, and strategies for beginners and advanced players." },
+    { title: "15 Genshin Tips for Beginners", url: "/genshin-tips-beginners", content: "Discover 15 essential tips for beginners in Genshin Impact. Learn strategies and gameplay techniques to level up faster and win more battles!" }
+];
+
+            
+            function performSearch(){
+        const query = searchInput.value.trim().toLowerCase();
+        if(query.length < 2){
+            resultsContainer.innerHTML = '<div class="no-results"><p>Please enter at least 2 characters</p></div>';
+            return;
+        }
+        const results = websitePages.filter(page => page.title.toLowerCase().includes(query) || page.content.toLowerCase().includes(query));
+        displayResults(results, query);
+    }
+
+    function displayResults(results, query){
+        if(results.length === 0){
+            resultsContainer.innerHTML = `<div class="no-results"><p>No results found for "${query}"</p></div>`;
+            return;
+        }
+        let resultsHTML = '';
+        results.forEach(page => {
+            const snippet = createSnippet(page.content, query);
+            resultsHTML += `
+                <div class="result-item" onclick="window.location.href='${page.url}'">
+                    <div class="result-title">${highlightText(page.title, query)}</div>
+                    <a href="${page.url}" class="result-url">${page.url}</a>
+                    <div class="result-snippet">${snippet}</div>
+                </div>
+            `;
+        });
+        resultsContainer.innerHTML = resultsHTML;
+    }
+
+    function createSnippet(content, query){
+        const index = content.toLowerCase().indexOf(query);
+        let start = Math.max(0,index-40);
+        let end = Math.min(content.length,index+query.length+80);
+        if(index === -1){ start=0; end=150; }
+        let snippet = content.substring(start,end);
+        if(start>0){ snippet='...'+snippet; }
+        if(end<content.length){ snippet=snippet+'...'; }
+        return highlightText(snippet, query);
+    }
+
+    function highlightText(text, query){
+        if(!query) return text;
+        const regex = new RegExp(`(${query})`, 'gi');
+        return text.replace(regex,'<mark>$1</mark>');
+    }
+
+    searchInput.addEventListener('keyup', performSearch);
+    searchInput.focus();
+});
+</script>
   
 
 
@@ -580,6 +796,7 @@
 </script>
 </body>
 </html>
+
 
 
 
