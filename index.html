@@ -333,6 +333,19 @@ h1 { font-size:2.2rem; margin-bottom:10px;}
 .clear-btn:hover {
     background: #c6c6c6;
 }
+@media(max-width:600px){
+    .search-box {
+        flex-direction: row; /* nebeneinander statt untereinander */
+        gap: 5px;            /* etwas Abstand zwischen den Buttons */
+    }
+    #search-input {
+        flex: 1;             /* Input nimmt restlichen Platz */
+    }
+    .search-btn, .clear-btn {
+        flex: 0 0 auto;      /* Buttons behalten feste Größe */
+    }
+}
+
 
  </style>
 
@@ -826,6 +839,7 @@ clearBtn.addEventListener('click', () => {
 </script>
 </body>
 </html>
+
 
 
 
