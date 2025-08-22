@@ -338,113 +338,7 @@ footer {
   </section>
 </a>
 
-  
-
-
-<!-- Optional: insert game-specific loading image HERE, below the banner -->
-
-<div class="tab-buttons-wrapper">
-  <div class="tab-buttons" role="tablist">
-    <!-- Haupt-Games als sichtbare Links -->
-    <a href="/brawlstars/" class="tab-button" role="tab" aria-selected="false" aria-controls="brawlstars" id="tab-brawlstars">Brawl Stars</a>
-    <a href="/roblox/" class="tab-button" role="tab" aria-selected="false" aria-controls="roblox" id="tab-roblox">Roblox</a>
-    <a href="/apex/" class="tab-button active" role="tab" aria-selected="true" aria-controls="apex" id="tab-apex">Apex Legends</a>
-
-    <!-- Other Games Toggle Button bleibt Button zum Aufklappen -->
-    <button class="tab-button" id="toggle-other-games" aria-expanded="false" aria-controls="other-games-list">Other Games ▼</button>
-  </div>
-
-  <!-- Versteckte Liste mit weiteren Games als Links -->
-  <div id="other-games-list" style="display: none; flex-direction: column; gap: 8px; margin-top: 10px;" role="tabpanel" aria-labelledby="toggle-other-games">
-    <a href="/cod/" class="tab-button" role="tab" aria-selected="false" aria-controls="cod" id="tab-cod">Call of Duty</a>
-    <a href="/clashroyale/" class="tab-button" role="tab" aria-selected="false" aria-controls="clashroyale" id="tab-clashroyale">Clash Royale</a>
-    <a href="/fortnite/" class="tab-button" role="tab" aria-selected="false" aria-controls="fortnite" id="tab-fortnite">Fortnite</a>
-    <a href="/genshin/" class="tab-button" role="tab" aria-selected="false" aria-controls="genshin" id="tab-genshin">Genshin Impact</a>
-    <a href="/fifa/" class="tab-button" role="tab" aria-selected="false" aria-controls="fifa" id="tab-fifa">FIFA / EA FC</a>
-    <a href="/minecraft/" class="tab-button" role="tab" aria-selected="false" aria-controls="minecraft" id="tab-minecraft">Minecraft</a>
-    <a href="/pubg/" class="tab-button" role="tab" aria-selected="false" aria-controls="pubg" id="tab-pubg">PUBG Mobile</a>
-  </div>
-</div>
-
-
-
-<script>
-  // Funktion zum Aktivieren eines Tabs
-  function activateTab(tabId) {
-    document.querySelectorAll('.tab-button').forEach(btn => {
-      btn.classList.remove('active');
-      btn.setAttribute('aria-selected', 'false');
-    });
-    document.querySelectorAll('.tab-content').forEach(content => {
-      content.classList.remove('active');
-    });
-
-    const button = document.getElementById('tab-' + tabId);
-    const content = document.getElementById(tabId);
-
-    if (button && content) {
-      button.classList.add('active');
-      button.setAttribute('aria-selected', 'true');
-      content.classList.add('active');
-    }
-  }
-
-  // Referenz auf Other Games Button und Liste
-  const otherGamesToggle = document.getElementById('toggle-other-games');
-  const otherGamesList = document.getElementById('other-games-list');
-
-  // Klick-Event für alle Tab-Buttons
-  document.querySelectorAll('.tab-button').forEach(button => {
-    button.addEventListener('click', () => {
-      // Wenn der Button der "Other Games" Toggle ist:
-      if (button === otherGamesToggle) {
-        const isExpanded = button.getAttribute('aria-expanded') === 'true';
-        if (isExpanded) {
-          // Liste zuklappen
-          otherGamesList.style.display = 'none';
-          button.setAttribute('aria-expanded', 'false');
-          button.textContent = 'Other Games ▼';
-        } else {
-          // Liste aufklappen
-          otherGamesList.style.display = 'flex';
-          button.setAttribute('aria-expanded', 'true');
-          button.textContent = 'Other Games ▲';
-        }
-        // Keine Tab-Aktivierung oder Content-Wechsel!
-        return;
-      }
-
-      // Sonst normalen Tab wechseln
-      const tabId = button.getAttribute('aria-controls');
-      activateTab(tabId);
-
-      // Other Games Liste zuklappen, wenn offen
-      otherGamesList.style.display = 'none';
-      otherGamesToggle.setAttribute('aria-expanded', 'false');
-      otherGamesToggle.textContent = 'Other Games ▼';
-
-      // URL anpassen (optional)
-      history.pushState(null, '', '/' + tabId + '/');
-    });
-  });
-
-  // Beim Laden der Seite den Tab aus der URL holen
-  window.addEventListener('DOMContentLoaded', () => {
-    const path = window.location.pathname.replace(/^\/|\/$/g, '');
-    if (path && document.getElementById('tab-' + path)) {
-      activateTab(path);
-    } else {
-      activateTab('brawlstars'); // Standard-Tab
-    }
-  });
-
-  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
-  document.querySelectorAll('.tab-button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.blur();
-    });
-  });
-</script>
+  </script>
 
   <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
@@ -703,6 +597,112 @@ clearBtn.addEventListener('click', () => {
 
 });
 </script>
+
+
+<!-- Optional: insert game-specific loading image HERE, below the banner -->
+
+<div class="tab-buttons-wrapper">
+  <div class="tab-buttons" role="tablist">
+    <!-- Haupt-Games als sichtbare Links -->
+    <a href="/brawlstars/" class="tab-button" role="tab" aria-selected="false" aria-controls="brawlstars" id="tab-brawlstars">Brawl Stars</a>
+    <a href="/roblox/" class="tab-button" role="tab" aria-selected="false" aria-controls="roblox" id="tab-roblox">Roblox</a>
+    <a href="/apex/" class="tab-button active" role="tab" aria-selected="true" aria-controls="apex" id="tab-apex">Apex Legends</a>
+
+    <!-- Other Games Toggle Button bleibt Button zum Aufklappen -->
+    <button class="tab-button" id="toggle-other-games" aria-expanded="false" aria-controls="other-games-list">Other Games ▼</button>
+  </div>
+
+  <!-- Versteckte Liste mit weiteren Games als Links -->
+  <div id="other-games-list" style="display: none; flex-direction: column; gap: 8px; margin-top: 10px;" role="tabpanel" aria-labelledby="toggle-other-games">
+    <a href="/cod/" class="tab-button" role="tab" aria-selected="false" aria-controls="cod" id="tab-cod">Call of Duty</a>
+    <a href="/clashroyale/" class="tab-button" role="tab" aria-selected="false" aria-controls="clashroyale" id="tab-clashroyale">Clash Royale</a>
+    <a href="/fortnite/" class="tab-button" role="tab" aria-selected="false" aria-controls="fortnite" id="tab-fortnite">Fortnite</a>
+    <a href="/genshin/" class="tab-button" role="tab" aria-selected="false" aria-controls="genshin" id="tab-genshin">Genshin Impact</a>
+    <a href="/fifa/" class="tab-button" role="tab" aria-selected="false" aria-controls="fifa" id="tab-fifa">FIFA / EA FC</a>
+    <a href="/minecraft/" class="tab-button" role="tab" aria-selected="false" aria-controls="minecraft" id="tab-minecraft">Minecraft</a>
+    <a href="/pubg/" class="tab-button" role="tab" aria-selected="false" aria-controls="pubg" id="tab-pubg">PUBG Mobile</a>
+  </div>
+</div>
+
+
+
+<script>
+  // Funktion zum Aktivieren eines Tabs
+  function activateTab(tabId) {
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+
+    const button = document.getElementById('tab-' + tabId);
+    const content = document.getElementById(tabId);
+
+    if (button && content) {
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+      content.classList.add('active');
+    }
+  }
+
+  // Referenz auf Other Games Button und Liste
+  const otherGamesToggle = document.getElementById('toggle-other-games');
+  const otherGamesList = document.getElementById('other-games-list');
+
+  // Klick-Event für alle Tab-Buttons
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      // Wenn der Button der "Other Games" Toggle ist:
+      if (button === otherGamesToggle) {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        if (isExpanded) {
+          // Liste zuklappen
+          otherGamesList.style.display = 'none';
+          button.setAttribute('aria-expanded', 'false');
+          button.textContent = 'Other Games ▼';
+        } else {
+          // Liste aufklappen
+          otherGamesList.style.display = 'flex';
+          button.setAttribute('aria-expanded', 'true');
+          button.textContent = 'Other Games ▲';
+        }
+        // Keine Tab-Aktivierung oder Content-Wechsel!
+        return;
+      }
+
+      // Sonst normalen Tab wechseln
+      const tabId = button.getAttribute('aria-controls');
+      activateTab(tabId);
+
+      // Other Games Liste zuklappen, wenn offen
+      otherGamesList.style.display = 'none';
+      otherGamesToggle.setAttribute('aria-expanded', 'false');
+      otherGamesToggle.textContent = 'Other Games ▼';
+
+      // URL anpassen (optional)
+      history.pushState(null, '', '/' + tabId + '/');
+    });
+  });
+
+  // Beim Laden der Seite den Tab aus der URL holen
+  window.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (path && document.getElementById('tab-' + path)) {
+      activateTab(path);
+    } else {
+      activateTab('brawlstars'); // Standard-Tab
+    }
+  });
+
+  // Optional: Verhindert Scroll-Jump durch Fokus bei Klick
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
+  });
+
 
   <!-- About Section -->
 <section id="about" style="max-width: 900px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
