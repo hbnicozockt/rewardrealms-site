@@ -348,29 +348,32 @@ footer {
     background: #4a6fc7;
     color: white;
     padding: 20px;
-    text-align: center;
     border-radius: 12px 12px 0 0;
     cursor: pointer;
-    position: relative; /* für absolute Positionierung des Pfeils */
+
+    display: flex;
+    justify-content: center; /* Überschrift zentriert */
+    align-items: center;
+    position: relative;
 }
 
 .search-header h1 {
     font-size: 1.6rem;
     margin: 0;
+    text-align: center;
 }
 
 .search-header .arrow {
     font-size: 1.2rem;
     position: absolute;
-    right: 20px; /* Abstand vom rechten Rand */
-    top: 50%;
-    transform: translateY(-50%);
+    right: 20px; /* Pfeil rechts */
     transition: transform 0.3s ease;
 }
 
-.search-header.active .arrow { 
-    transform: translateY(-50%) rotate(180deg); 
+.search-header.active .arrow {
+    transform: rotate(180deg);
 }
+
 
 
 h1 { font-size:1.6rem; margin:0; }
@@ -440,9 +443,42 @@ h1 { font-size:1.6rem; margin:0; }
 
 <div class="container">
     <header class="search-header" id="toggleSearch">
-        <h1>Search through RewardRealms</h1>
-        <span class="arrow">▼</span>
-    </header>
+    <h1>Search through RewardRealms</h1>
+    <span class="arrow">▼</span>
+</header>
+
+<style>
+.search-header {
+    background: #4a6fc7;
+    color: white;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center; /* Überschrift horizontal zentriert */
+    align-items: center;     /* Vertikal zentriert */
+    position: relative;      /* Pfeil absolut positionierbar */
+}
+
+.search-header h1 {
+    font-size: 1.6rem;
+    margin: 0;
+    text-align: center;
+}
+
+.search-header .arrow {
+    font-size: 1.2rem;
+    position: absolute;
+    right: 20px; /* Pfeil rechts */
+    transition: transform 0.3s ease;
+}
+
+.search-header.active .arrow {
+    transform: rotate(180deg);
+}
+</style>
+
 
     <div class="search-content" id="searchContent">
         <div class="search-box">
