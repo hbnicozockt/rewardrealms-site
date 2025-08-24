@@ -352,7 +352,7 @@ footer {
     cursor: pointer;
 
     display: flex;
-    justify-content: center; /* Überschrift zentriert */
+    justify-content: center; /* Haupttext zentrieren */
     align-items: center;
     position: relative;
 }
@@ -361,6 +361,10 @@ footer {
     font-size: 1.6rem;
     margin: 0;
     text-align: center;
+    white-space: nowrap; /* verhindert Zeilenumbruch */
+    overflow: hidden;    /* falls es zu lang wird */
+    text-overflow: ellipsis; /* zeigt "..." an, falls Text zu lang */
+    max-width: calc(100% - 40px); /* Platz für den Pfeil freilassen */
 }
 
 .search-header .arrow {
@@ -373,6 +377,7 @@ footer {
 .search-header.active .arrow {
     transform: rotate(180deg);
 }
+
 
 
 
@@ -456,15 +461,19 @@ h1 { font-size:1.6rem; margin:0; }
     cursor: pointer;
 
     display: flex;
-    justify-content: center; /* Überschrift horizontal zentriert */
-    align-items: center;     /* Vertikal zentriert */
-    position: relative;      /* Pfeil absolut positionierbar */
+    justify-content: center; /* Haupttext zentrieren */
+    align-items: center;
+    position: relative;
 }
 
 .search-header h1 {
     font-size: 1.6rem;
     margin: 0;
     text-align: center;
+    white-space: nowrap; /* verhindert Zeilenumbruch */
+    overflow: hidden;    /* falls es zu lang wird */
+    text-overflow: ellipsis; /* zeigt "..." an, falls Text zu lang */
+    max-width: calc(100% - 40px); /* Platz für den Pfeil freilassen */
 }
 
 .search-header .arrow {
@@ -477,6 +486,7 @@ h1 { font-size:1.6rem; margin:0; }
 .search-header.active .arrow {
     transform: rotate(180deg);
 }
+
 </style>
 
 
