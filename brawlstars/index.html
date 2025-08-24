@@ -345,25 +345,33 @@ footer {
 
 /* Header-Button */
 .search-header {
-    background:#4a6fc7;
-    color:white;
-    padding:20px;
-    text-align:center;
+    background: #4a6fc7;
+    color: white;
+    padding: 20px;
+    text-align: center;
     border-radius: 12px 12px 0 0;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.2s;
+    position: relative; /* für absolute Positionierung des Pfeils */
 }
-.search-header:hover { background:#3b5bb5; }
+
+.search-header h1 {
+    font-size: 1.6rem;
+    margin: 0;
+}
 
 .search-header .arrow {
     font-size: 1.2rem;
+    position: absolute;
+    right: 20px; /* Abstand vom rechten Rand */
+    top: 50%;
+    transform: translateY(-50%);
     transition: transform 0.3s ease;
 }
-.search-header.active .arrow { transform: rotate(180deg); }
+
+.search-header.active .arrow { 
+    transform: translateY(-50%) rotate(180deg); 
+}
+
 
 h1 { font-size:1.6rem; margin:0; }
 
