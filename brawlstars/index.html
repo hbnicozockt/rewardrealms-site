@@ -352,7 +352,7 @@ footer {
     cursor: pointer;
 
     display: flex;
-    justify-content: center; /* Haupttext zentrieren */
+    justify-content: center;
     align-items: center;
     position: relative;
 }
@@ -361,18 +361,19 @@ footer {
     font-size: 1.6rem;
     margin: 0;
     text-align: center;
-    white-space: nowrap; /* verhindert Zeilenumbruch */
-    overflow: hidden;    /* falls es zu lang wird */
-    text-overflow: ellipsis; /* zeigt "..." an, falls Text zu lang */
-    max-width: calc(100% - 40px); /* Platz für den Pfeil freilassen */
+
+    /* Wichtiger Teil: volle Breite nutzen und Platz für Pfeil freihalten */
+    padding-right: 30px; /* Platz für Pfeil */
+    box-sizing: border-box;
 }
 
 .search-header .arrow {
     font-size: 1.2rem;
     position: absolute;
-    right: 20px; /* Pfeil rechts */
+    right: 20px;
     transition: transform 0.3s ease;
 }
+
 
 .search-header.active .arrow {
     transform: rotate(180deg);
